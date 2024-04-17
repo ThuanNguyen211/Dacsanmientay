@@ -1,0 +1,316 @@
+@import url("node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+:root {
+    --bs-primary: #4cad0c;
+    --bs-secondary: #72bf45;
+    --secondary-color: #ff9d00;
+    --text-gray: #6b7280;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+}
+
+#logo {
+    max-height: 80px;
+}
+
+/* .navbar {
+    background-color: var(--bs-white) !important;
+} */
+
+.navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+a.nav-link {
+    font-weight: 600;
+}
+
+a.nav-link.active, a.nav-link:hover {
+    color: var(--bs-secondary) !important;
+    text-decoration: underline;
+    text-underline-offset: 18px ;
+}
+
+/* -------------- Main swiper --------------------- */
+.mainSwiper {
+    width: 100%;
+    height: calc(100vh - 144px);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-data {
+    padding: 10%;
+    background-color: rgb(241 255 251);
+}
+
+.card-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.dat-hang-ngay-btn:hover {
+    background-color: var(--secondary-color) !important;
+}
+/* -------------- feature product --------------------- */
+
+.feature-product {
+    background-color: #6f9e62;
+}
+
+.zoom div a img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    transition: transform 0.25s;
+}
+
+.zoom:hover div a img {
+    transform: scale(1.1);
+}
+/* -------------- demo product --------------------- */
+
+.featureDemoProductWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+    .featureDemoProductWrapper img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+.demo-title a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.demo-title + a {
+    color: var(--text-gray);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.productItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.productItem .productThumbnail {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+    .productItem .productThumbnail {
+        margin-bottom: 10px;
+    }
+}
+
+.productThumbnail {
+    width: 100%;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+}
+
+.productThumbnail img {
+    object-fit: cover;
+    height: 100%;
+}
+
+
+/* -------------- tin tuc --------------------- */
+.tin-tuc-title a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.tin-tuc-title + a {
+    color: var(--text-gray);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.featurePostWrapper::after {
+    content: " ";
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    background-image: linear-gradient(135deg, #292484, #dc4225);
+}
+
+.featurePostWrapper:hover .shThumb {
+    transform: scale(1.05);
+}
+
+.postItemWrapper:hover .shThumb {
+    transform: scale(1.05);
+}
+
+.shThumb {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+@media only screen and (min-width: 768px){
+    .shThumb {
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .shThumb {
+        height: 540px;
+    }
+}
+
+/* -------------- doi tac --------------------- */
+
+
+.doi-tac-Swiper .swiper-wrapper img {
+    height: 90px;
+    object-fit: contain;
+}
+
+
+
+/* -------------- footer --------------------- */
+footer {
+    gap: 20px;
+}
+
+.card-footer-img-wrapper {
+    background: linear-gradient( #9cc4fc, #d0c3fc);
+}
+
+@media only screen and (max-width: 992px) {
+    .card-footer-img {
+        height: 150px;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+footer h3 {
+    color: var(--bs-primary);
+    font-size: 15px;
+}
+
+#footer-about a, #footer-product a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+#footer-about a:hover, #footer-product a:hover {
+    color: var(--bs-black);
+}
+
+#footer-certificate {
+    margin-top: 22px;
+    gap: 10px;
+    align-items: center;
+}
+
+#footer-certificate img {
+    height: 40px;
+}
+
+#footer-certificate img:nth-child(3) {
+    height: 55px;
+}
+/* Thuan */
+/* Định dạng CSS cơ bản cho trang sản phẩm */
+.product-card {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+  }
+  .product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .price {
+    color: #e8491d;
+    font-weight: bold;
+  }
+  /* Back to Top */
+  #myBtn {
+    display: none; /* Ẩn nút khi trang web được tải */
+    position: fixed; /* Đặt nút ở vị trí cố định trên màn hình */
+    bottom: 20px; /* Khoảng cách từ dưới cùng */
+    right: 30px; /* Khoảng cách từ bên phải */
+    z-index: 99; /* Đảm bảo nút nằm trên các phần tử khác */
+    border: none; /* Không viền */
+    outline: none; /* Không đường viền khi focus */
+    background-color: #4CAF50; /* Màu nền xanh lá */
+    color: white; /* Màu chữ */
+    cursor: pointer; /* Con trỏ chuột sẽ thay đổi khi di qua nút */
+    padding: 5px; /* Đệm xung quanh nội dung bên trong nút */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Tạo viền hình lục giác */
+  }
+  
+  #myBtn .arrow-up {
+    display: block;
+    font-size: 15px; /* Kích thước của mũi tên */
+  }
+  
+  #myBtn .top-text {
+    display: block;
+    font-size: 10px; /* Kích thước của chữ 'Top' */
+  }
+  
+  #myBtn:hover {
+    background-color: #367C39; /* Màu nền khi hover */
+  }
+  
+  
+
+  .search-container {
+    margin: 20px 0;
+  }
+  
+  #searchInput {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+  }

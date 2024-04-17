@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài khoản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="templates/admin.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="offcanvas offcanvas-start" id="demo">
+                <div class="offcanvas-header">
+                  <h1 class="offcanvas-title">
+                    
+                    <a class="nav-link" href="admin.html">Trang Chủ Admin</a>
+                </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    <a class="nav-link" href="qldonhang.html">Quản lý đơn hàng</a>
+                    <a class="nav-link" href="qlsanpham.html">Quản lý sản phẩm</a>
+                    <a class="nav-link" href="baoloi.html">Báo lỗi</a>
+                </div>
+              </div>
+              
+              <div class="container-fluid mt-3">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    <i class="fa-solid fa-house"></i>
+                </button>
+              </div>
+              <!-- <div class="dropdown position-absolute" style="right: 200px; top: 30px;">
+                <a class="navbar-brand ms-lg-5" href="#"><img src="assets/Ảnh trống.jpg" alt=""
+                        id="avatar" class="dropbtn"></a>
+                List
+                <div class="dropdown-content">
+                    <a href="index.html">Profile</a>
+                    <a href="login.html">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div> -->
+
+        </nav>
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="front-header">
+                <div class="container-fluid">
+                    <a class="navbar-brand ms-lg-5" href="#"><i class="fa-solid fa-user"></i> Tài khoản & đơn hàng</a>
+
+                    <div class="social">
+
+                    </div>
+                </div>
+            </div>
+        </nav> -->
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            
+            <div class="container-fluid">
+                <a class="navbar-brand ms-lg-5" href="#"><img src="./assets/image/logo.png" alt="" id="logo"></a>
+                <div class="collapse navbar-collapse justify-content-between px-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <div class="d-flex link-page">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./templates/dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./templates/qldonhang.html">Quản lý đơn hàng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./templates/qlsanpham.html">Quản lý sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./templates/baoloi.html">Báo lỗi</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+                
+                Tai khoan
+                <div class="dropdown">
+                    <a class="navbar-brand ms-lg-5" href="#"><img src="assets/Ảnh trống.jpg" alt=""
+                            id="avatar" class="dropbtn"></a>
+                    List
+                    <div class="dropdown-content">
+                        <a href="index.html">Profile</a>
+                        <a href="login.html">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav> -->
+    </header>
+    <main>
+
+        <div class="container-md">
+            <div class="info">
+                <div class="info_item shadow p-4 mb-4 bg-white">
+                    <p class="">Danh thu năm</p>
+                    <span class="fs-1">2000000000</span>
+
+                </div>
+                <div class="info_item shadow p-4 mb-4 bg-white">
+                    <p class="">Danh thu tháng</p>
+                    <span class="fs-1">200000</span>
+
+                </div>
+            </div>
+            <div class="bieudo">
+                <div class="bieudosp">
+                    <h2>Thống kê tiêu thụ sản phẩm</h2>
+                    <div>
+                        <canvas id="bieudosp"></canvas>
+                    </div>
+                </div>
+                <div class="bieudokho">
+                    <h2>Tình trạng kho</h2>
+                    <div>
+                        <canvas id="bieudokho"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="templates/script.js"></script>
+
+</body>
+
+</html>
