@@ -1,0 +1,57 @@
+.login-form {
+    background-color: rgba(114, 191, 68, 0.2); /* Màu nền với độ trong suốt */
+    border-radius: 10px; /* Bo tròn góc */
+    padding: 20px; /* Khoảng cách nội dung với viền */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+    backdrop-filter: blur(5px); /* Làm mờ nền */
+  }
+  .login-form .form-control {
+    height: 70px; /* Chiều cao 50px */
+    font-size: 1.25rem;
+    border-radius: 10px; /* Bo tròn góc */
+  }
+  .signup-form .form-control {
+    height: 70px; /* Chiều cao 50px */
+    font-size: 1.25rem;
+    border-radius: 10px; /* Bo tròn góc */
+  }
+  .signup-form .btn-success {
+    margin-left: 25px; /* Thụt về phía phải */
+    font-size: 1.25rem;
+    height: 60px;
+  }
+  .login-form .btn-success {
+    margin-left: 25px; /* Thụt về phía phải */
+    font-size: 1.25rem;
+    height: 60px;
+  }
+  .login-form .form-check {
+    margin-left: 30px; /* Thụt về phía phải */
+    font-size: 1.25rem;
+  }
+  .login-form a {
+    margin-left: 13px; /* Thụt về phía phải */
+  }
+  .signup-form a {
+    margin-left: 13px; /* Thụt về phía phải */
+  }
+  .signup-form {
+    background-color: rgba(114, 191, 68, 0.2); /* Màu nền với độ trong suốt */
+    border-radius: 10px; /* Bo tròn góc */
+    padding: 20px; /* Khoảng cách nội dung với viền */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+    backdrop-filter: blur(5px); /* Làm mờ nền */
+  }
+
+.fa-eye {
+  cursor: pointer;
+  /* Các style khác để phù hợp với form của bạn */
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}

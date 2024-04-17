@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ quản lý</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./templates/admin.css">
+</head>
+
+<body class="bg-body-tertiary">
+    <header>
+        <div class="container-fluid d-flex justify-content-between bg-body-tertiary">
+            
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                    aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+                    <i class="bi bi-list btn fs-4"></i>
+                </button>
+            
+            <h1 class="title text-center">Trang chủ quản lý</h1>
+            
+            <div class="dropdown">
+                <a class="navbar-brand" href="#"><img src="assets/Ảnh trống.jpg" alt="" id="avatar"
+                        class="dropbtn"></a>
+                List
+                <div class="dropdown-content">
+                    <a href="index.html">Profile</a>
+                    <a href="login.html">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid d-flex shadow-sm">
+                <div>
+                    <nav class="collapse collapse-horizontal show bg-white" id="main-nav" style="height: 100vh">
+                        <ul class="navbar-nav justify-content-end align-center" style="width: 300px">
+                            <li class="nav-item">
+                                <div class="d-flex justify-content-center">
+                                    <img src="assets/favicon/vietnamfood.png" alt="" style="height: 80px;">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin.html">
+                                    <i class="bi bi-house-door me-2"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.html">
+                                    <i class="bi bi-speedometer me-2"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="qldonhang.html">
+                                    <i class="bi bi-receipt me-2"></i>
+                                    Quản lý đơn hàng
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qlsanpham.html">
+                                    <i class="bi bi-box-seam me-2"></i>
+                                    Quản lý sản phẩm
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="baoloi.html">
+                                    <i class="bi bi-bug me-2"></i>
+                                    Báo lỗi
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            <div class="container-md main_content">
+                <div class="container-fluid">
+                    <h1 class="title">Quản lý đơn hàng</h1>
+                    <div class="admin-info">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mã đơn</th>
+                                    <th scope="col">Tên KH</th>
+                                    <th scope="col">Địa chỉ</th>
+                                    <th scope="col">SĐT giao hàng</th>
+                                    <th scope="col">Thời gian tạo</th>
+                                    <th scope="col">Thành tiền</th>
+                                    <th scope="col">Trạng thái</th>
+                                    <th scope="col">Chi tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><span>001</span></th>
+                                    <td><span>Nguyễn Văn B</span></td>
+                                    <td><span>Phong Điền, Cần Thơ</span></td>
+                                    <td><span>0864652487</span></td>
+                                    <td><span>20:30 14/03/2024</span></td>
+                                    <td><span>200000</span></td>
+                                    <td>
+                                        <select class="form-select-sm" aria-label="Default select example">
+                                            <option value="cho_duyet">Chờ duyệt</option>
+                                            <option value="da_duyet">Đã duyệt</option>
+                                            <option value="dang_giao">Đang giao</option>
+                                            <option value="da_giao">Đã giao</option>
+                                            <option value="da_huy">Đã hủy</option>
+                                        </select>
+                                    </td>
+                                    <td><a href="#" id="hoadon-link" data-bs-toggle="modal" data-bs-target="#hoadon">Xem chi
+                                            tiết hóa đơn....</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span>002</span></th>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+            
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span>003</span></th>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+                                    <td><span></span></td>
+            
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            
+                    <div class="danhthu">
+                        <h2 id="danhthu">Tổng danh thu tháng: </h2>
+                        <h2>2000000</h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    
+<div class="modalhoadon">
+    <!-- Modal thêm sản phẩm -->
+    <div class="modal" id="hoadon">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Hóa đơn</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="chitiethoadon">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="invoice-title">
+                                                <h4 class="float-end font-size-15">#001 <span
+                                                        class="badge bg-success font-size-12 ms-2">Đã thanh toán</span></h4>
+                                                <div class="mb-4">
+                                                    <h2 class="mb-1 text-muted">Tên danh nghiệp</h2>
+                                                </div>
+                                                <div class="text-muted">
+                                                    <p class="mb-1">Ninh Kiều, Cần Thơ</p>
+                                                    <p class="mb-1"><i class="uil uil-envelope-alt me-1"></i>nvb@.com</p>
+                                                    <p><i class="uil uil-phone me-1"></i> 99999999</p>
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-4">
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="text-muted">
+                                                        <h5 class="font-size-16 mb-3">Thanh toán bởi:</h5>
+                                                        <h5 class="font-size-15 mb-2">Nguyễn Văn B</h5>
+                                                        <p class="mb-1">Phong Điền , Cần Thơ</p>
+                                                        <p class="mb-1">nguyenvanb@gmail.com</p>
+                                                        <p>0864652487</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end col -->
+                                                <div class="col-sm-6">
+                                                    <div class="text-muted text-sm-end">
+                                                        <div>
+                                                            <h5 class="font-size-15 mb-1">Mã hóa đơn:</h5>
+                                                            <p>#001</p>
+                                                        </div>
+                                                        <div class="mt-4">
+                                                            <h5 class="font-size-15 mb-1">Ngày lập hóa đơn:</h5>
+                                                            <p>12 tháng 12 năm 2020</p>
+                                                        </div>
+                                                        <div class="mt-4">
+                                                            <h5 class="font-size-15 mb-1">Số đặt hàng:</h5>
+                                                            <p>#1123456</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end col -->
+                                            </div>
+                                            <!-- end row -->
+
+                                            <div class="py-2">
+                                                <h5 class="font-size-15">Tóm tắt đơn hàng</h5>
+
+                                                <div class="table-responsive">
+                                                    <table
+                                                        class="table align-middle table-nowrap table-centered mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width: 70px;">Mã sp</th>
+                                                                <th>Tên sản phẩm</th>
+                                                                <th>Giá</th>
+                                                                <th>Số lượng</th>
+                                                                <th class="text-end" style="width: 120px;">Tổng
+                                                                </th>
+                                                            </tr>
+                                                        </thead><!-- end thead -->
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">01</th>
+                                                                <td>
+                                                                    <div>
+                                                                        <h5 class="text-truncate font-size-14 mb-1">
+                                                                            Xoài Cát Hòa Lộc</h5>
+                                                                        <p class="text-muted mb-0">Lô hàng mới</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>$ 90000</td>
+                                                                <td>2</td>
+                                                                <td class="text-end">$ 180.000</td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                            <tr>
+                                                                <th scope="row">02</th>
+                                                                <td>
+                                                                    <div>
+                                                                        <h5 class="text-truncate font-size-14 mb-1">
+                                                                            Sầu Riêng Ri 6</h5>
+                                                                        <p class="text-muted mb-0">Phong Điền</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>$ 130.000</td>
+                                                                <td>5</td>
+                                                                <td class="text-end">$650.000</td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                            <tr>
+                                                                <th scope="row" colspan="4" class="text-end">Tổng cộng</th>
+                                                                <td class="text-end">$830.000</td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                            <tr>
+                                                                <th scope="row" colspan="4"
+                                                                    class="border-0 text-end">
+                                                                    Giảm giá :</th>
+                                                                <td class="border-0 text-end">- $30.000</td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                            <tr>
+                                                                <th scope="row" colspan="4"
+                                                                    class="border-0 text-end">
+                                                                    Phí giao hàng :</th>
+                                                                <td class="border-0 text-end">$30.000</td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                            <tr>
+                                                                <th scope="row" colspan="4"
+                                                                    class="border-0 text-end">
+                                                                    GTGT</th>
+                                                                <td class="border-0 text-end">$15.00</td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                            <tr>
+                                                                <th scope="row" colspan="4"
+                                                                    class="border-0 text-end">Thành tiền</th>
+                                                                <td class="border-0 text-end">
+                                                                    <h4 class="m-0 fw-semibold">$845.000</h4>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- end tr -->
+                                                        </tbody><!-- end tbody -->
+                                                    </table><!-- end table -->
+                                                </div><!-- end table responsive -->
+                                                <div class="d-print-none mt-4">
+                                                    <div class="float-end">
+                                                        <a href="javascript:window.print()"
+                                                            class="btn btn-success me-1"><i
+                                                                class="fa fa-print"></i></a>
+                                                        <a href="#" class="btn btn-primary w-md">Gửi</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+
+
+

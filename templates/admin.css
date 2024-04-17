@@ -1,0 +1,193 @@
+@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-tophearder: #72BF44;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --text-gray: #6b7280;
+}
+
+
+#logo {
+    max-height: 80px;
+}
+
+nav {
+    background-color: #fff;
+    font-size: 1.2rem;
+    z-index: 9;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-item .nav-link {
+    padding: 10px 15px;
+}
+
+.nav-item .nav-link.active {
+    background-color: #d1e8de;
+    border-left: 5px solid var(--bs-green);
+}
+
+.main_content {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    background-color: #f1fffb;
+    min-height: 100vh;
+}
+
+main .sub-title {
+    margin-right: auto;
+}
+
+
+.btn-group .qldon, .qlsp {
+    margin: 0 20px;
+
+}
+
+/* Active */
+a.active {
+    background-color: var(--bs-tophearder);
+}
+
+/* ------------------------- Trang don hang ----------------------------*/
+
+.danhthu {
+    display: flex;
+    gap: 0px 40px;
+}
+
+/*Thêm đơn hàng */
+#themdon {
+    margin-right: auto;
+}
+
+.modal .active {
+    display: block;
+}
+
+
+
+/*avatar and list */
+#avatar {
+    max-width: 45px;
+    border-radius: 999px;
+    margin-top: 0;
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+/* Hoa đon */
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: 1rem;
+}
+
+
+
+/* Dashboard */
+
+.info {
+    display: flex;
+    gap: 0 20px;
+}
+
+.info_item {
+    min-width: 300px;
+}
+
+.bieudo {
+    display: flex;
+    gap: 0 30px;
+}
+
+.position-absolute {
+    position: absolute;
+}
