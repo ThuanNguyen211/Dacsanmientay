@@ -1,3 +1,5 @@
+@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -8,7 +10,7 @@
     --bs-yellow: #ffc107;
     --bs-green: #198754;
     --bs-teal: #20c997;
-    --bs-tophearder : #72BF44;
+    --bs-tophearder: #72BF44;
     --bs-cyan: #0dcaf0;
     --bs-white: #fff;
     --bs-gray: #6c757d;
@@ -24,59 +26,59 @@
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  }
+    --text-gray: #6b7280;
+}
 
 
 #logo {
     max-height: 80px;
 }
 
-.navbar {
-    background-color: var(--bs-white)!important;
-    padding-top: 0;
+nav {
+    background-color: #fff;
+    font-size: 1.2rem;
+    z-index: 9;
 }
 
-
-.navbar-nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.nav-item {
+    margin-bottom: 10px;
 }
 
-.front-header{
-    width: 100vw;
-    height: 40px;
-    background-color: var(--bs-tophearder);
+.nav-item .nav-link {
+    padding: 10px 15px;
 }
 
-main .container-fluid{
-    display: flex;
+.nav-item .nav-link.active {
+    background-color: #d1e8de;
+    border-left: 5px solid var(--bs-green);
+}
+
+.main_content {
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 1000px;
-}
-main .admin-info{
-    width: 1200px;
+    justify-content: center; */
+    background-color: #f1fffb;
+    min-height: 100vh;
 }
 
-main .sub-title{
+main .sub-title {
     margin-right: auto;
 }
 
 
-.btn-group .qldon, .qlsp{
+.btn-group .qldon, .qlsp {
     margin: 0 20px;
-    
+
 }
 
 /* Active */
 a.active {
-    background-color: var(--bs-secondary);
+    background-color: var(--bs-tophearder);
 }
 
-/*  Trang don hang */
+/* ------------------------- Trang don hang ----------------------------*/
 
-.danhthu{
+.danhthu {
     display: flex;
     gap: 0px 40px;
 }
@@ -86,14 +88,14 @@ a.active {
     margin-right: auto;
 }
 
-.modal .active{
+.modal .active {
     display: block;
 }
 
 
 
 /*avatar and list */
-#avatar{
+#avatar {
     max-width: 45px;
     border-radius: 999px;
     margin-top: 0;
@@ -102,45 +104,51 @@ a.active {
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  font-size: 16px;
-  border: none;
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    border: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 10px;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 
 
@@ -149,6 +157,7 @@ a.active {
 .card {
     box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
 }
+
 .card {
     position: relative;
     display: flex;
@@ -157,7 +166,7 @@ a.active {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 0 solid rgba(0,0,0,.125);
+    border: 0 solid rgba(0, 0, 0, .125);
     border-radius: 1rem;
 }
 
@@ -165,20 +174,20 @@ a.active {
 
 /* Dashboard */
 
-.info{
+.info {
     display: flex;
     gap: 0 20px;
 }
-.info_item{
+
+.info_item {
     min-width: 300px;
 }
 
-.bieudo{
+.bieudo {
     display: flex;
     gap: 0 30px;
 }
 
 .position-absolute {
     position: absolute;
-  }
-
+}

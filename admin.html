@@ -5,159 +5,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ quản lý</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./templates/admin.css">
     <link rel="shortcut icon" type="image/png" href="./assets/favicon/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./templates/admin.css">
 </head>
 
-<body>
+<body class="bg-body-tertiary">
     <header>
-        <nav class="container">
-            <div class="offcanvas offcanvas-start" id="demo">
-                <div class="offcanvas-header">
-                  <h1 class="offcanvas-title">
-                    
-                    <a class="nav-link" href="admin.html">Trang Chủ Admin</a>
-                </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <a class="nav-link" href="dashboard.html">Dashboard</a>
-                    <a class="nav-link" href="qldonhang.html">Quản lý đơn hàng</a>
-                    <a class="nav-link" href="qlsanpham.html">Quản lý sản phẩm</a>
-                    <a class="nav-link" href="baoloi.html">Báo lỗi</a>
-                </div>
-              </div>
-              
-              <div class="container-fluid mt-3">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                    <i class="fa-solid fa-house"></i>
+        <div class="container-fluid d-flex justify-content-between bg-body-tertiary">
+            
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                    aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+                    <i class="bi bi-list btn fs-4"></i>
                 </button>
-              </div>
-              <div class="dropdown position-absolute" style="right: 200px; top: 30px;">
-                <a class="navbar-brand ms-lg-5" href="#"><img src="assets/Ảnh trống.jpg" alt=""
-                        id="avatar" class="dropbtn"></a>
+            
+            <h1 class="title text-center">Trang chủ quản lý</h1>
+            
+            <div class="dropdown">
+                <a class="navbar-brand" href="#"><img src="assets/Ảnh trống.jpg" alt="" id="avatar"
+                        class="dropbtn"></a>
                 List
                 <div class="dropdown-content">
                     <a href="index.html">Profile</a>
                     <a href="login.html">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
                 </div>
             </div>
-
-        </nav>
-        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="front-header">
-                <div class="container-fluid">
-                    <a class="navbar-brand ms-lg-5" href="#"><i class="fa-solid fa-user"></i> Tài khoản & đơn hàng</a>
-
-                    <div class="social">
-
-                    </div>
-                </div>
-            </div>
-        </nav> -->
-        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            
-            <div class="container-fluid">
-                <a class="navbar-brand ms-lg-5" href="#"><img src="./assets/image/logo.png" alt="" id="logo"></a>
-                <div class="collapse navbar-collapse justify-content-between px-5" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <div class="d-flex link-page">
-                            <li class="nav-item">
-                                <a class="nav-link" href="./templates/dashboard.html">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./templates/qldonhang.html">Quản lý đơn hàng</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./templates/qlsanpham.html">Quản lý sản phẩm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./templates/baoloi.html">Báo lỗi</a>
-                            </li>
-                        </div>
-
-                    </ul>
-                </div>
-                
-                Tai khoan
-                <div class="dropdown">
-                    <a class="navbar-brand ms-lg-5" href="#"><img src="assets/Ảnh trống.jpg" alt=""
-                            id="avatar" class="dropbtn"></a>
-                    List
-                    <div class="dropdown-content">
-                        <a href="index.html">Profile</a>
-                        <a href="login.html">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav> -->
+        </div>
     </header>
     <main>
-        <div class="container-fluid">
-            <h1 class="title">Trang chủ quản lý</h1>
-            <h2 class="sub-title">Thông tin admin : </h2>
-            <div class="admin-info">
-                <table class="table table-striped table-bordered ">
-                    <tr>
-                        <td>
-                            ID :
-                        </td>
-                        <td>
-                            <span name="id">
-                                01
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Tên :
-                        </td>
-                        <td>
-                            <span name="name">
-                                Nguyễn Văn A
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Ngày tạo tài khoản :
-                        </td>
-                        <td>
-                            <span name="day">
-                                01/01/2024
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Loại tài khoản :
-                        </td>
-                        <td>
-                            <span name="type">
-                                staff
-                            </span>
-                        </td>
-                    </tr>
+        <div class="container-fluid d-flex shadow-sm">
+                <div>
+                    <nav class="collapse collapse-horizontal show bg-white" id="main-nav" style="height: 100vh">
+                        <ul class="navbar-nav justify-content-end align-center" style="width: 300px">
+                            <li class="nav-item">
+                                <div class="d-flex justify-content-center">
+                                    <img src="assets/favicon/vietnamfood.png" alt="" style="height: 80px;">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="admin.html">
+                                    <i class="bi bi-house-door me-2"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.html">
+                                    <i class="bi bi-speedometer me-2"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qldonhang.html">
+                                    <i class="bi bi-receipt me-2"></i>
+                                    Quản lý đơn hàng
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qlsanpham.html">
+                                    <i class="bi bi-box-seam me-2"></i>
+                                    Quản lý sản phẩm
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="baoloi.html">
+                                    <i class="bi bi-bug me-2"></i>
+                                    Báo lỗi
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-                </table>
-            </div>
-            <div class="button-group">
-                <a href="./templates/qldonhang.html"><button type="button" class="btn btn-primary qldon">Quản lý đơn
-                        hàng</button></a>
-                <a href="./templates/qlsanpham.html"><button type="button" class="btn btn-primary qlsp">Quản lý sản
-                        phẩm</button></a>
+            <div class="container-md main_content">
+                <h2 class="sub-title">Thông tin admin : </h2>
+                <div class="admin-info container-sm">
+                    <table class="table table-striped table-bordered ">
+                        <tr>
+                            <td>
+                                ID :
+                            </td>
+                            <td>
+                                <span name="id">
+                                    01
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Tên :
+                            </td>
+                            <td>
+                                <span name="name">
+                                    Nguyễn Văn A
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ngày tạo tài khoản :
+                            </td>
+                            <td>
+                                <span name="day">
+                                    01/01/2024
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Loại tài khoản :
+                            </td>
+                            <td>
+                                <span name="type">
+                                    staff
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
 
-
+    
 </body>
-
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>
