@@ -12,54 +12,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/x-icon" href="/assets/img/web-component/logo-transparent.png">
-<style>
-  .product-detail {
-    display: flex;
-    border: 1px solid #ddd;
-    margin-top: 20px;
-    padding: 20px;
-  }
-  .product-image {
-    flex: 50%;
-  }
-  .product-info {
-    flex: 50%;
-    padding-left: 20px;
-  }
-  .price {
-    color: #e8491d;
-    font-weight: bold;
-  }
-  .rating {
-    display: flex;
-    align-items: center;
-  }
-  .rating-star {
-    color: #ffd700; /* Gold color for stars */
-  }
-  .policy {
-    margin-top: 20px;
-  }
-  .breadcrumb {
-  background-color: #f8f9fa; /* Light grey background */
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-
-.breadcrumb a {
-  color: #007bff; /* Bootstrap primary blue */
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb .active {
-  color: #6c757d; /* Bootstrap secondary text color */
-}
-
-</style>
+<link rel="stylesheet" href="css/product-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
   <header>
@@ -132,27 +89,52 @@
       </ol>
     </nav>
     
-    <div id="product-detail-container">
+    <div id="product-container">
        <!-- Chi tiết sản phẩm sẽ được thêm vào đây bằng JavaScript -->
-      
     </div>
    
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="#policy">Chính sách bảo hành</a>
+        <a class="nav-link" href="#detail">THÔNG TIN SẢN PHẨM</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Mô tả chi tiết sản phẩm</a>
+        <a class="nav-link" href="#policy">CAM KẾT CHẤT LƯỢNG</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Đánh giá từ khách hàng</a>
+        <a class="nav-link" href="#">ĐÁNH GIÁ</a>
       </li>
     </ul>
+
+    <div id="detail">
+     <!-- Chi tiết sản phẩm -->
+    </div>
+
     <div id="policy">
       <!-- Thêm chính sách bảo hành ở đây -->
-      <h3>Chính sách bảo hành</h3>
-      <p>Bảo hành 12 tháng...</p>
+      <br>
+      <h3>Cam Kết Chất Lượng</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>img</td>
+            <td>Miễn phí vận chuyển cho đơn hàng trên 3 triệu</td>
+          </tr>
+          <tr>
+            <td>img</td>
+            <td>Giao hành nhanh toàn quốc</td>
+          </tr>
+          <tr>
+            <td>img</td>
+            <td>Holine 0869 056 168 hỗ trợ từ 8h30 - 22h mỗi ngày</td>
+          </tr>
+          <tr>
+            <td>img</td>
+            <td>Đến nơi nhận hàng trả, hoàn tiền trong 24h</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
   </main>
     
 <footer class="mt-5">
@@ -264,17 +246,17 @@ function fetchProductDetail() {
     .then(response => response.json())
     .then(products => {
       const product = products.find(p => p.masp === productId);
-      displayProductDetail(product);
+      displayProduct(product);
+      detail(product);
     })
     .catch(error => console.error('Lỗi khi lấy dữ liệu:', error));
 }
 
-// Hàm để hiển thị chi tiết sản phẩm
-function displayProductDetail(product) {
+function displayProduct(product) {
   if (product) {
-    const container = document.getElementById('product-detail-container');
+    const container = document.getElementById('product-container');
     container.innerHTML = `
-      <div class="product-detail">
+    <div class="product-detail">
         <div class="product-image">
           <!-- Carousel start -->
           <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -300,14 +282,44 @@ function displayProductDetail(product) {
         </div>
         <div class="product-info">
           <h2>${product.name}</h2>
-          <div class="rating">
-            <!-- Thêm số sao đánh giá ở đây -->
-            <span class="rating-star">⭐⭐⭐⭐⭐</span>
-            <span>(5/5)</span>
+          <p class="price">${product.price}đ</p>
           </div>
-          <p>${product.content}</p>
-          <p class="price">${product.price} VND</p>
-          </div>
+      </div>
+    `;
+  } else {
+    console.error('Sản phẩm không tồn tại!');
+  }
+}
+
+// Hàm để hiển thị chi tiết sản phẩm
+function detail(product) {
+  if (product) {
+    const container = document.getElementById('detail');
+    container.innerHTML = `
+      <br>
+      <h3>Thông Tin  Sản Phẩm</h3>
+      <div class="product-detail">
+        <div class="product-info">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Mã sản phẩm</td>
+                <td>${product.masp}</td>
+              </tr>
+              <tr>
+                <td>Mô tả sản phẩm</td>
+                <td>${product.content}</td>
+              </tr>
+              <tr>
+                <td>Trọng lượng</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Bảo quản</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
       </div>
     `;
   } else {
