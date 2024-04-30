@@ -10,7 +10,7 @@ function fetchProductDetail() {
       const product = products.find(p => p.masp === productId);
       displayProduct(product);
       detail(product);
-      addCart(product);
+      // addCart(product);
     })
     .catch(error => console.error('Lỗi khi lấy dữ liệu:', error));
 }
@@ -19,7 +19,7 @@ function displayProduct(product) {
   if (product) {
     const container = document.getElementById('product-container');
     container.innerHTML = `
-    <div class="product-detail">
+    <div class="product-detail" id="products">
         <div class="product-image">
           <!-- Carousel start -->
           <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -46,9 +46,9 @@ function displayProduct(product) {
         <div class="product-info">
           <h2>${product.name}</h2>
           <p class="price">${product.price}<sup>đ</sup></p>
-          <div>
+          <div">
             <input type="number" value="1" min="1">
-            <button class="add">Thêm vào giỏ hàng</button>
+            <button class="btn btn-primary"  onClick='addToCart(${product.masp})'>Thêm vào giỏ hàng</button>
           </div>
         </div>
       </div>
@@ -97,20 +97,25 @@ function detail(product) {
 // Gọi hàm để lấy dữ liệu và hiển thị chi tiết sản phẩm
 fetchProductDetail();
 
-function addCart(product){
-    console.log(product.masp, product.name, product.price)
+// function addCart(product){
+//     console.log(product.masp, product.name, product.price)
+// }
+
+// const btn = document.querySelectorAll("button.product-info")
+// // console.log(btn)
+// btn.forEach(function content(button){
+//     button.addEventListener("click",function(event){
+//         var btnItem = event.target
+//         var product = btnItem.parentElement
+//         var productInput = product.querySelector("input")
+//         console.log(productInput)
+//     })
+// })
+
+
+let productInCart = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("product-detail")) : []
+
+function addToCart(masp){
+  let checkProduct = productInCart.some(p => p.masp === masp)
+  console.log(checkProduct)
 }
-
-const btn = document.querySelectorAll(".add")
-console.log(btn)
-btn.forEach(function content(button, index){
-    button.addEventListener("click",function(event){
-        var btnItem = event.target
-        var product = btnItem.parentElement
-        var productInput = product.querySelector("input")
-        console.log(productInput)
-    })
-})
-
-
-
