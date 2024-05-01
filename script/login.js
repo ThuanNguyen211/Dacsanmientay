@@ -1,12 +1,12 @@
-document.getElementById('loginform').addEventListener('submit', function(e) {
+document.getElementById('loginform').addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    
+
     // Giả sử bạn có một hàm để kiểm tra thông tin đăng nhập
     var emailType = checkLogin(email, password);
-    
+
     // Chuyển hướng người dùng dựa trên loại tài khoản
     if (emailType === 'admin') {
         alert('Đăng nhập thành công tài khoản admin!');
@@ -17,23 +17,23 @@ document.getElementById('loginform').addEventListener('submit', function(e) {
     } else {
         alert('Thông tin đăng nhập không chính xác!');
     }
-  });
-  
-  function checkLogin(email, password) {
+});
+
+function checkLogin(email, password) {
     // Giả sử bạn có một cơ sở dữ liệu hoặc một cách nào đó để kiểm tra thông tin đăng nhập
     // Đây chỉ là một ví dụ đơn giản
     if (email === 'admin@gmail.com' && password === 'admin123') {
-      return 'admin';
-    } else if (email  === 'user@gmail.com' && password === 'user123') {
-      return 'user';
+        return 'admin';
+    } else if (email === 'user@gmail.com' && password === 'user123') {
+        return 'user';
     } else {
-      return null;
+        return null;
     }
-  }
+}
 // window.onload = function() {
 //     var registeredUsername = localStorage.getItem('newEmail');
 //     var registeredPassword = localStorage.getItem('newPassword');
-    
+
 //     if (registeredUsername && registeredPassword) {
 //       document.getElementById('email').value = registeredUsername;
 //       document.getElementById('password').value = registeredPassword;
@@ -41,19 +41,18 @@ document.getElementById('loginform').addEventListener('submit', function(e) {
 //   };
 
 document.getElementById('togglePassword').addEventListener('click', function () {
-  // Lấy trường nhập mật khẩu
-  var passwordInput = document.getElementById('password');
-  // Kiểm tra type của input
-  if (passwordInput.type === 'password') {
-    // Chuyển type của input thành text để hiển thị mật khẩu
-    passwordInput.type = 'text';
-    // Thay đổi icon nếu bạn muốn
-    this.classList.toggle('fa-eye-slash');
-  } else {
-    // Chuyển type của input thành password để ẩn mật khẩu
-    passwordInput.type = 'password';
-    // Thay đổi icon nếu bạn muốn
-    this.classList.toggle('fa-eye-slash');
-  }
+    // Lấy trường nhập mật khẩu
+    var passwordInput = document.getElementById('password');
+    // Kiểm tra type của input
+    if (passwordInput.type === 'password') {
+        // Chuyển type của input thành text để hiển thị mật khẩu
+        passwordInput.type = 'text';
+        this.classList.remove('fa-eye');
+        this.classList.add('fa-eye-slash');
+    } else {
+        // Chuyển type của input thành password để ẩn mật khẩu
+        passwordInput.type = 'password';
+        this.classList.remove('fa-eye-slash');
+        this.classList.add('fa-eye');
+    }
 });
-  
