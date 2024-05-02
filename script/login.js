@@ -1,3 +1,12 @@
+const userAPI = "http://localhost:3000/user";
+function getUser(callback) {
+    fetch(userAPI)
+        .then(res => res.json())
+        .then(callback);
+}
+let data = [];
+getUser((res) => data = [...res])
+
 document.getElementById('loginform').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -20,26 +29,17 @@ document.getElementById('loginform').addEventListener('submit', function (e) {
 });
 
 function checkLogin(email, password) {
-    // Giả sử bạn có một cơ sở dữ liệu hoặc một cách nào đó để kiểm tra thông tin đăng nhập
-    // Đây chỉ là một ví dụ đơn giản
-    if (email === 'admin@gmail.com' && password === 'admin123') {
-        return 'admin';
-    } else if (email === 'user@gmail.com' && password === 'user123') {
-        return 'user';
-    } else {
-        return null;
+    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].email === email && data[i].password === password) {
+            if (data[i].role == "admin") return "admin";
+            else if (data[i].role == "user") return "user";
+        }
     }
+    return null;
 }
-// window.onload = function() {
-//     var registeredUsername = localStorage.getItem('newEmail');
-//     var registeredPassword = localStorage.getItem('newPassword');
 
-//     if (registeredUsername && registeredPassword) {
-//       document.getElementById('email').value = registeredUsername;
-//       document.getElementById('password').value = registeredPassword;
-//     }
-//   };
-
+//------------ toggle password ------------------------
 document.getElementById('togglePassword').addEventListener('click', function () {
     // Lấy trường nhập mật khẩu
     var passwordInput = document.getElementById('password');
