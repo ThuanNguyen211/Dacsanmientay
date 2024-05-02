@@ -1,20 +1,24 @@
 import { nanoid } from "../node_modules/nanoid/nanoid.js"
 
+const userAPI = "http://localhost:3000/user";
+function getUser(callback) {
+    fetch(userAPI)
+        .then(res => res.json())
+        .then(callback);
+}
 let data = [];
-fetch("../json/user.json")
-    .then(res => res.json())
-    .then(res => data = [...res])
+getUser((res) => data = [...res])
 
-document.getElementById('signupForm').addEventListener('submit', function (e) {
+document.getElementById('signupForm').addEventListener('submit', e => {
     e.preventDefault();
+
     const newUsername = document.getElementById('newUsername').value;
     const newEmail = document.getElementById('newEmail').value;
     const newPassword = document.getElementById('newPassword').value;
     const confirmPassword = document.getElementById("confirmPassword").value;
     const iduser = nanoid();
-    console.log(newUsername, newEmail, newPassword, iduser);
+
     let ok = true;
-    
     //-------------- valid -----------------
     data.forEach(user => {
         if (user.email === newEmail) {
@@ -33,17 +37,26 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     }
     //-------------------------------------
     if (ok) {
-        const fs = require("fs");
-        const userJSON = "../json/user.json";
-        const newUser = {"iduser":iduser, "username":newUsername, "email":newEmail, "password":newPassword, "role":"user"}
-        data.push(newUser);
-        try {
-            const data = fs.readFileSync(userJSON);
-            const dataJSON = JSON.stringify(data);
-            fs.writeFileSync(userJSON, dataJSON);
-        } catch (error) {
-            console.error(error);
+        const newUser = {"id":iduser, "username":newUsername, "email":newEmail, "password":newPassword, "role":"user"}
+        function createUser(data, callback) {
+            var options = {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify(data)
+            }
+            fetch(userAPI, options)
+                .then(function (response) {
+                    response.json;
+                })
+                .then(callback)
         }
+        createUser(newUser);
         alert('Đăng ký thành công!');
+        window.location.href = "/login.html";
     }
+    return ok;
 });
+
