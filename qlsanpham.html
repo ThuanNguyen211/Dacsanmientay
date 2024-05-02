@@ -4,236 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ quản lý</title>
+    <title>Quản lý sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="admin.css">
     <link rel="shortcut icon" type="image/png" href="./assets/favicon/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./templates/admin.css">
 </head>
 
-<body class="bg-body-tertiary">
+<body>
     <header>
-        <div class="container-fluid d-flex justify-content-between bg-body-tertiary">
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="front-header">
+                <div class="container-fluid">
+                    <a class="navbar-brand ms-lg-5" href="#"><i class="fa-solid fa-user"></i> Tài khoản & đơn hàng</a>
 
-            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-                aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
-                <i class="bi bi-list btn fs-4"></i>
-            </button>
+                    <div class="social">
 
-            <h1 class="title text-center">Trang chủ quản lý</h1>
-
-            <div class="dropdown">
-                <a class="navbar-brand" href="#"><img src="assets/Ảnh trống.jpg" alt="" id="avatar" class="dropbtn"></a>
-                List
-                <div class="dropdown-content">
-                    <a href="index.html">Profile</a>
-                    <a href="login.html">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container-fluid d-flex shadow-sm">
-            <div>
-                <nav class="collapse collapse-horizontal show bg-white" id="main-nav" style="height: 100vh">
-                    <ul class="navbar-nav justify-content-end align-center" style="width: 300px">
-                        <li class="nav-item">
-                            <div class="d-flex justify-content-center">
-                                <img src="assets/favicon/vietnamfood.png" alt="" style="height: 80px;">
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="admin.html">
-                                <i class="bi bi-house-door me-2"></i>
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dashboard.html">
-                                <i class="bi bi-speedometer me-2"></i>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="qldonhang.html">
-                                <i class="bi bi-receipt me-2"></i>
-                                Quản lý đơn hàng
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="qlsanpham.html">
-                                <i class="bi bi-box-seam me-2"></i>
-                                Quản lý sản phẩm
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="baoloi.html">
-                                <i class="bi bi-bug me-2"></i>
-                                Báo lỗi
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="container-md main_content">
-                <h1 class="title">Quản lý sản phẩm</h1>
-        <div class="admin-info">
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">Mã sp</th>
-                        <th scope="col">Tên sp</th>
-                        <th scope="col">Xuất xứ</th>
-                        <th scope="col">Số lượng</th>
-                        <th scope="col">Giá bán mỗi sp</th>
-                        <th scope="col">Đơn vị tính</th>
-                        <th scope="col">Lô hàng</th>
-                        <th scope="col">Ngày nhập</th>
-                        <th scope="col">Ngày hết hạn</th>
-                        <th scope="col">Thao tác</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"><span>001</span></th>
-                        <td><span>Xoài Cát Hòa Lộc</span></td>
-                        <td><span>Tiền Giang</span></td>
-                        <td><span>90000</span></td>
-                        <td><span>10</span></td>
-                        <td><span>kg</span></td>
-                        <td><span>TG001</span></td>
-                        <td><span>20/03/2024</span></td>
-                        <td><span>04/04/2024</span></td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <button type="button" class="btn btn-warning" id="suasp-btn" data-bs-toggle="modal"
-                                    data-bs-target="#suasp">Sửa</button>
-                                <button type="button" class="btn btn-danger">Xóa</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><span>002</span></th>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><span>003</span></th>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-
-                    </tr>
-                </tbody>
-            </table>
-            <!--Thêm sản phẩm-->
-            <button type="button" class="btn btn-primary" id="themsanpham-btn" data-bs-toggle="modal"
-                data-bs-target="#themsanpham">+ Thêm sản phẩm</button>
-
-        </div>
-
-        <!--Giảm giá -->
-
-        <h1 class="title">Giảm giá</h1>
-        <div class="admin-info">
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">STT</th>
-                        <th scope="col">Mã sp</th>
-                        <th scope="col">Tên sp</th>
-                        <th scope="col">Giá gốc</th>
-                        <th scope="col">Tỉ lệ giảm ( %)</th>
-                        <th scope="col">Giá giảm</th>
-                        <th scope="col">Đơn vị tính</th>
-                        <th scope="col">Ngày bắt đầu</th>
-                        <th scope="col">Ngày kết thúc</th>
-                        <th scope="col">Ghi chú</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"><span>01</span></th>
-                        <td><span>001</span></td>
-                        <td><span>Xoài Cát Hòa Lộc</span></td>
-                        <td><span>100000</span></td>
-                        <td><span>10</span></td>
-                        <td><span>90000</span></td>
-                        <td><span>Kg</span></td>
-                        <td><span>20/03/2024</span></td>
-                        <td><span>04/04/2024</span></td>
-                        <td><span>SALE lô hàng cuối</span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><span>02</span></th>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><span>03</span></th>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-
-                    </tr>
-                </tbody>
-            </table>
-            <button type="button" class="btn btn-primary" id="themgiamgia-btn" data-bs-toggle="modal"
-                data-bs-target="#themgiamgia">+ Thêm giảm giá </button>
-            <div class="danhthu">
-                <h2 id="kho">Kho: </h2>
-                <div class="bieudo">
-                    <div>
-                        <canvas id="bieudokho"></canvas>
                     </div>
                 </div>
             </div>
-        </div>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-lg-5" href="#"><img src="../assets/image/logo.png" alt="" id="logo"></a>
+                <div class="collapse navbar-collapse justify-content-between px-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <div class="d-flex link-page">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qldonhang.html">Quản lý đơn hàng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Quản lý sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qltaikhoan.html">Quản lý tài khoản</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="baoloi.html">Báo lỗi</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+                <!-- Tai khoan-->
+                <div class="dropdown">
+                    <a class="navbar-brand ms-lg-5" href="../index.html"><img src="../assets/image/Ảnh trống.jpg" alt=""
+                            id="avatar" class="dropbtn"></a>
+                    <!-- List-->
+                    <div class="dropdown-content">
+                        <a href="../index.html">Profile</a>
+                        <a href="#">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <h1 class="title">Quản lý sản phẩm</h1>
+            <div class="admin-info">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mã sp</th>
+                            <th scope="col">Tên sp</th>
+                            <th scope="col">Xuất xứ</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Giá bán mỗi sp</th>
+                            <th scope="col">Đơn vị tính</th>
+                            <th scope="col">Ngày nhập</th>
+                            <th scope="col">Ngày hết hạn</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list">
+                        
+                    </tbody>
+                </table>
+                <!--Thêm sản phẩm-->
+                <button type="button" class="btn btn-primary" id="themsanpham-btn" data-bs-toggle="modal"
+                    data-bs-target="#themsanpham">+ Thêm sản phẩm</button>
+
+            </div>
+
+            <!--Giảm giá -->
+
+            <h1 class="title">Giảm giá</h1>
+            <div class="admin-info">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">STT</th>
+                            <th scope="col">Mã sp</th>
+                            <th scope="col">Tên sp</th>
+                            <th scope="col">Giá gốc</th>
+                            <th scope="col">Tỉ lệ giảm ( %)</th>
+                            <th scope="col">Giá giảm</th>
+                            <th scope="col">Đơn vị tính</th>
+                            <th scope="col">Ngày bắt đầu</th>
+                            <th scope="col">Ngày kết thúc</th>
+                            <th scope="col">Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span>01</span></th>
+                            <td><span>001</span></td>
+                            <td><span>Xoài Cát Hòa Lộc</span></td>
+                            <td><span>100000</span></td>
+                            <td><span>10</span></td>
+                            <td><span>90000</span></td>
+                            <td><span>Kg</span></td>
+                            <td><span>20/03/2024</span></td>
+                            <td><span>04/04/2024</span></td>
+                            <td><span>SALE lô hàng cuối</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span>02</span></th>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span>03</span></th>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary" id="themgiamgia-btn" data-bs-toggle="modal"
+                    data-bs-target="#themgiamgia">+ Thêm giảm giá </button>
+                <div class="danhthu">
+                    <h2 id="kho">Kho: </h2>
+                    <div class="bieudo">
+                        <div>
+                            <canvas id="bieudokho"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
     </main>
+
+
 
     <div class="modalsp">
         <!-- Modal thêm sản phẩm -->
         <div class="modal" id="themsanpham">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-    
+
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title">Thêm sản phẩm</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         <form action="">
@@ -262,12 +210,8 @@
                                 <input type="text" class="form-control" id="donvitinh" placeholder="Đơn vị tính">
                             </div>
                             <div class="mb-3">
-                                <label for="xuatxu" class="form-label">Hình ảnh</label>
-                                <input type="file" class="form-control" id="xuatxu">
-                            </div>
-                            <div class="mb-3">
-                                <label for="loh" class="form-label">Lô hàng</label>
-                                <input type="text" class="form-control" id="loh" placeholder="Lô hàng">
+                                <label for="hinhanh" class="form-label">Hình ảnh</label>
+                                <input type="text" class="form-control" id="hinhanh" placeholder="Nhập đường dẫn hình ảnh">
                             </div>
                             <div class="mb-3">
                                 <label for="ngaynhap" class="form-label">Ngày nhập</label>
@@ -277,35 +221,35 @@
                                 <label for="ngayhethan" class="form-label">Ngày hết hạn</label>
                                 <input type="date" class="form-control" id="ngayhethan">
                             </div>
-    
+
                         </form>
-    
-    
+
+
                     </div>
-    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Nhập</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="btn-add">Thêm</button>
+                        <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
                     </div>
-    
+
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="modalgiamgia">
         <!-- Modal thêm sản phẩm -->
         <div class="modal" id="themgiamgia">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-    
+
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title">Thêm giảm giá</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         <form action="">
@@ -347,32 +291,32 @@
                             </div>
                         </form>
                     </div>
-    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Nhập</button>
+                        <button type="" class="btn btn-primary" data-bs-dismiss="modal">Nhập</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
                     </div>
-    
+
                 </div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <!--Modal sua san pham-->
-    <div class="modalsp">
+    <div class="modalsuasp">
         <!-- Modal sửa sản phẩm -->
         <div class="modal" id="suasp">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-    
+
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title">Thay đổi thông tin sản phẩm</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         <form action="">
@@ -402,15 +346,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="hinhanh" class="form-label">Hình ảnh</label>
-                                <select class="form-select-sm" aria-label="Default select example">
-                                    <option value="themhinhanh">Thêm hình ảnh</option>
-                                    <option value="suahinhanh">Thay đổi hình ảnh</option>
-                                </select>
-                                <input type="file" class="form-control" id="hinhanh">
-                            </div>
-                            <div class="mb-3">
-                                <label for="loh" class="form-label">Lô hàng</label>
-                                <input type="text" class="form-control" id="loh" placeholder="Lô hàng">
+                                <input type="text" class="form-control" id="hinhanh" placeholder="Nhập đường dẫn hình ảnh mới">
                             </div>
                             <div class="mb-3">
                                 <label for="ngaynhap" class="form-label">Ngày nhập</label>
@@ -420,32 +356,27 @@
                                 <label for="ngayhethan" class="form-label">Ngày hết hạn</label>
                                 <input type="date" class="form-control" id="ngayhethan">
                             </div>
-    
+
                         </form>
-    
-    
+
+
                     </div>
-    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Nhập</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btn-update">Lưu</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
                     </div>
-    
+
                 </div>
             </div>
         </div>
     </div>
-    
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script/qlsanpham.js"></script>
+
+
 
 </html>
-
-
-
-
-
