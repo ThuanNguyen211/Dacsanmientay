@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/login&signup.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/bootstrap.min.js">
-    <link rel="stylesheet" href="css/main.min.css">
+    <title>Đăng ký</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login&signup.css">
     <link rel="icon" type="image/x-icon" href="/assets/img/web-component/logo-transparent.png">
 </head>
 
@@ -23,7 +23,7 @@
         <div class="top-bar d-flex justify-content-between align-content-center text-light px-5 py-1"
             style="background: #72bf45;">
             <div class="d-flex ms-5 fs-6 ">
-                <a href="components/login.html" class="text-light">
+                <a href="./login.html" class="text-light">
                     <i class="bi bi-person-circle pe-2"></i>
                     Tài khoản & đơn hàng
                 </a>
@@ -84,35 +84,35 @@
         <div class="container-fluid main_container">
             <!-- Form với class là signup-form -->
             <div class="row p-3 justify-content-around">
-                <form class="signup-form col-md-6" id="registerForm">
+                <form class="signup-form col-md-6" id="signupForm">
                     <h1 class="text-center text-uppercase py-3 fw-bold" style="color: #d0f2e8;">Đăng Ký</h1>
                     <!-- Username -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">
                             <label for="newUsername"><i class="bi bi-person-circle fs-5"></i></label>
                         </span>
-                        <input type="text" id="newUsername" class="form-control" placeholder="Họ và tên" aria-label="email" aria-describedby="basic-addon1">
+                        <input type="text" id="newUsername" class="form-control" placeholder="Họ và tên" aria-label="email" aria-describedby="basic-addon1" required>
                     </div>
                     <!-- Email -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon2">
                             <label for="email"><i class="bi bi-envelope-at-fill fs-5"></i></label>
                         </span>
-                        <input type="text" id="newEmail" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon2">
+                        <input type="text" id="newEmail" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon2" required>
                     </div>
                     <!-- Password -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon3">
                             <label for="newPassword"><i class="bi bi-key-fill fs-5"></i></label>
                         </span>
-                        <input type="text" id="newPassword" class="form-control" placeholder="Mật khẩu" aria-label="email" aria-describedby="basic-addon3">
+                        <input type="password" id="newPassword" class="form-control" placeholder="Mật khẩu" aria-label="email" aria-describedby="basic-addon3" required>
                     </div>
                     <!--Xác nhận lại Password-->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon4">
                             <label for="newPassword"><i class="bi bi-key-fill fs-5"></i></label>
                         </span>
-                        <input type="text" id="confirmPassword" class="form-control" placeholder="Xác nhận mật khẩu" aria-label="email" aria-describedby="basic-addon4">
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Xác nhận mật khẩu" aria-label="email" aria-describedby="basic-addon4" required>
                     </div>
                     <!-- Nút đăng ký -->
                     <button type="submit" class="d-block m-auto btn btn-secondary fs-4 shadow-sm">Đăng ký</button>
@@ -227,8 +227,7 @@
 </body>
 <script src="https://kit.fontawesome.com/965ecd562f.js" crossorigin="anonymous"></script>
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>
-<script src="script/index.js" type="module"></script>
 <script src="script/swiper.js"></script>
-<script src="script/signup.js"></script>
+<script src="script/signup.js" type="module"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>
