@@ -4,7 +4,7 @@ const productId = params.get('masp');
 
 // Hàm để lấy dữ liệu sản phẩm và hiển thị chi tiết
 function fetchProductDetail() {
-  fetch("assets/product.json")
+  fetch("json/product.json")
     .then(response => response.json())
     .then(products => {
       const product = products.find(p => p.masp === productId);
@@ -71,19 +71,19 @@ function detail(product) {
             <tbody>
               <tr>
                 <td>Mã sản phẩm</td>
-                <td>${product.masp}</td>
+                <td  style="text-transform: uppercase;">${product.masp}</td>
               </tr>
               <tr>
                 <td>Mô tả sản phẩm</td>
                 <td>${product.content}</td>
               </tr>
               <tr>
-                <td>Trọng lượng</td>
-                <td></td>
+                <td>Xuất xứ</td>
+                <td>${product.xuatxu}</td>
               </tr>
               <tr>
                 <td>Bảo quản</td>
-                <td></td>
+                <td>Nơi khô ráo thoáng mát, tránh ánh nắng trực tiếp</td>
               </tr>
             </tbody>
           </table>
