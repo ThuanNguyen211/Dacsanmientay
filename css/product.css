@@ -1,0 +1,50 @@
+#product-container div {
+    height: 400px;
+} 
+
+#product-container .card-body {
+    position: absolute;
+    margin-top: 300px;
+}
+/* Back to Top */
+#myBtn {
+    display: none; /* Ẩn nút khi trang web được tải */
+    position: fixed; /* Đặt nút ở vị trí cố định trên màn hình */
+    bottom: 20px; /* Khoảng cách từ dưới cùng */
+    right: 30px; /* Khoảng cách từ bên phải */
+    z-index: 99; /* Đảm bảo nút nằm trên các phần tử khác */
+    border: none; /* Không viền */
+    outline: none; /* Không đường viền khi focus */
+    background-color: #4CAF50; /* Màu nền xanh lá */
+    color: white; /* Màu chữ */
+    cursor: pointer; /* Con trỏ chuột sẽ thay đổi khi di qua nút */
+    padding: 5px; /* Đệm xung quanh nội dung bên trong nút */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Tạo viền hình lục giác */
+  }
+  
+  #myBtn .arrow-up {
+    display: block;
+    font-size: 15spx; /* Kích thước của mũi tên */
+  }
+  
+  #myBtn .top-text {
+    display: block;
+    font-size: 20px; /* Kích thước của chữ 'Top' */
+  }
+  
+  #myBtn:hover {
+    background-color: #367C39; /* Màu nền khi hover */
+  }
+  
+  
+
+  .search-container {
+    margin: 20px 0;
+  }
+  
+  #searchInput {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+  }
