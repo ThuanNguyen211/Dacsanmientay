@@ -24,7 +24,7 @@ document.getElementById('loginform').addEventListener('submit', function(e) {
     // Đây chỉ là một ví dụ đơn giản
     if (email === 'admin@gmail.com' && password === 'admin123') {
       return 'admin';
-    } else if (email  === 'user@gmail.com' && password === 'user123') {
+    } else if (email  === 'kn3t@gmail.com' && password === 'kn3t@123') {
       return 'user';
     } else {
       return null;
