@@ -36,3 +36,8 @@
 .breadcrumb .active {
   color: #6c757d; /* Bootstrap secondary text color */
 }
+.product-info table tbody tr td:first-child{
+  width: 150px;
+  text-align: left;
+  
+}
