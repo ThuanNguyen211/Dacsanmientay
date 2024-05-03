@@ -5,7 +5,8 @@
 }
 
 .spImg_container {
-    width: 300px;
+    width: 100px;
+    height: 125px;
 }
 
 .spInfo_container {
@@ -13,5 +14,11 @@
 }
 
 img {
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price {
+    color: #e8491d;
+    font-weight: bold;
 }

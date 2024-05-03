@@ -37,7 +37,7 @@ logoutBtn.addEventListener("click", event => {
     window.location.href = "index.html";
 })
 
-//---------------------- Gio hang -----------------------
+//---------------------- Hien Gio hang -----------------------
 let cartDiv = $("#cart");
 
 let storage = []
@@ -63,12 +63,13 @@ currentUserID.then(userid => {
 
     getCart(cart => {
         danhSachSP = cart.danhSachSP;
-        console.log(storage)
+        //console.log(storage)
+        let total = 0;
         danhSachSP.forEach(item => {
             let sanPham = document.createElement("div");
             let masp = item.masp;
             let soluong = item.soluong;
-            let tensp, imgURL;
+            let tensp, imgURL, price;
             // for (let i = 0; i < storage.length; i++) {
             //     if (storage[i])
             // }
@@ -76,24 +77,103 @@ currentUserID.then(userid => {
                 if (sp.masp === masp) {
                     tensp = sp.name;
                     imgURL = sp.photo1;
+                    price = sp.price;
                 }
             })
+            total += price*soluong;
             sanPham.className = "container_fluid sp_container"
             sanPham.innerHTML = 
                 `
                     
                         <div class="spImg_container"><img src="${imgURL}"></div>
                         <div class="spInfo_container">
-                            ${tensp}
-                            ${soluong}
+                            <p class="lead">${tensp}</p>
+                        </div>
+                        <div>
+                            <input type="number" min=1 value="${soluong}" class="soluong_input" masp="${masp}">
+                        </div>
+                        <div>
+                        <p class="price">${price*soluong}<sup>đ</sup></p>
+                        </div>
+                        <div>
+                            <a class="btn xoa_sp" masp="${masp}">
+                                <i class="bi bi-trash3"></i>
+                            </a>
                         </div>
                     
                 `
-            cartDiv.appendChild(sanPham)
+            cartDiv.appendChild(sanPham);
         })
+        const total_container = $("#total_container");
+        total_container.innerHTML = 
+            `
+                <p class="fs-3">Tổng thanh toán: <span class="price">${total}<sup>đ</sup></span></p>
+            `
     })
 })
+//----------------------- input handler ----------------------------
 
+function getCart(callback) {
+    getCurrentUser(user => {
+        fetch(`${cartAPI}/${user.id}`)
+            .then(res => res.json())
+            .then(callback)
+    })
+}
+
+function addCartAPI(danhSachSP) {
+    getCurrentUser(user => {
+        fetch(`${cartAPI}/${user.id}`, {
+            method: 'PATCH',
+            body: JSON.stringify(
+                {
+                    "danhSachSP": danhSachSP
+                }
+            ),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+    })
+}
+
+setTimeout(() => {
+    const soluong_inputs = document.querySelectorAll(".soluong_input");
+    console.log(soluong_inputs)
+    soluong_inputs.forEach(soluong_input => {
+        soluong_input.addEventListener("change", () => {
+            
+            let soluong = soluong_input.value;
+            let masp = soluong_input.getAttribute("masp");
+            console.log(masp)
+            getCart(cart => {
+                let danhSachSP = cart.danhSachSP;
+                for (let i = 0; i < danhSachSP.length; i++) {
+                    if (masp === danhSachSP[i].masp) {
+                        danhSachSP[i].soluong = soluong;
+                        addCartAPI(danhSachSP);
+                    }
+                }
+            })
+        })
+    })
+    //------------------- Xoa sp --------------------------------
+    const xoa_sps = document.querySelectorAll(".xoa_sp");
+    xoa_sps.forEach(xoa_sp => {
+        xoa_sp.addEventListener("click", () => {
+            let masp = xoa_sp.getAttribute("masp");
+            getCart(cart => {
+                let danhSachSP = cart.danhSachSP;
+                for (let i = 0; i < danhSachSP.length; i++) {
+                    if (masp === danhSachSP[i].masp) {
+                        danhSachSP.splice(i, 1);
+                        addCartAPI(danhSachSP);
+                    }
+                }
+            })
+        })
+    })
+}, 500)
 
 
 
