@@ -1,0 +1,17 @@
+.sp_container {
+    max-height: 200px;
+    margin: 10px 0;
+    display: flex;
+}
+
+.spImg_container {
+    width: 300px;
+}
+
+.spInfo_container {
+
+}
+
+img {
+    object-fit: contain;
+}

@@ -1,6 +1,7 @@
 import { nanoid } from "../node_modules/nanoid/nanoid.js"
 
 const userAPI = "http://localhost:3000/user";
+const cartAPI = "http://localhost:3000/carts";
 function getUser(callback) {
     fetch(userAPI)
         .then(res => res.json())
@@ -53,7 +54,22 @@ document.getElementById('signupForm').addEventListener('submit', e => {
                 })
                 .then(callback)
         }
+        function createCart(iduser) {
+            fetch(cartAPI, {
+                method: 'POST',
+                body: JSON.stringify(
+                    {
+                        id:iduser,
+                        danhSachSP: []
+                    }
+                ),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+        }
         createUser(newUser);
+        createCart(newUser.id);
         alert('Đăng ký thành công!');
         window.location.href = "/login.html";
     }

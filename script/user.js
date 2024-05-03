@@ -65,20 +65,28 @@ currentUserID.then(userid => {
         console.log(storage)
         danhSachSP.forEach(item => {
             let sanPham = document.createElement("div");
-            idsp = item.idsp;
-            let tensp, soluong = 0;
+            let masp = item.masp;
+            let soluong = item.soluong;
+            let tensp, imgURL;
             // for (let i = 0; i < storage.length; i++) {
             //     if (storage[i])
             // }
             storage.forEach(sp => {
-                if (sp.masp === idsp) {
+                if (sp.masp === masp) {
                     tensp = sp.name;
+                    imgURL = sp.photo1;
                 }
             })
+            sanPham.className = "container_fluid sp_container"
             sanPham.innerHTML = 
                 `
-                    ${tensp}
-                    ${soluong}
+                    
+                        <div class="spImg_container"><img src="${imgURL}"></div>
+                        <div class="spInfo_container">
+                            ${tensp}
+                            ${soluong}
+                        </div>
+                    
                 `
             cartDiv.appendChild(sanPham)
         })

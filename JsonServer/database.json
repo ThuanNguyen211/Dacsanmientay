@@ -651,27 +651,42 @@
       "email": "user2@gmail.com",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "1cGh8EXKWYrzROArJLNqi",
+      "username": "user3",
+      "email": "user3@gmail.com",
+      "password": "123",
+      "role": "user"
     }
   ],
   "currentUser": {
-    "id": "user2",
-    "username": "username2"
+    "id": null,
+    "username": ""
   },
   "carts": [
     {
       "id": "user1",
       "danhSachSP": [
         {
-          "idsp": "sp001",
+          "masp": "sp001",
+          "soluong": "2"
+        },
+        {
+          "masp": "sp005",
+          "soluong": "2"
+        },
+        {
+          "masp": "sp006",
+          "soluong": "3"
+        },
+        {
+          "masp": "sp003",
           "soluong": 2
         },
         {
-          "idsp": "sp002",
-          "soluong": 3
-        },
-        {
-          "idsp": "sp003",
-          "soluong": 1
+          "masp": "sp016",
+          "soluong": 11
         }
       ]
     },
@@ -679,16 +694,33 @@
       "id": "user2",
       "danhSachSP": [
         {
-          "idsp": "sp004",
-          "soluong": 5
+          "masp": "sp004",
+          "soluong": "5"
         },
         {
-          "idsp": "sp005",
-          "soluong": 2
+          "masp": "sp005",
+          "soluong": "2"
         },
         {
-          "idsp": "sp006",
-          "soluong": 3
+          "masp": "sp006",
+          "soluong": "3"
+        },
+        {
+          "masp": "sp008",
+          "soluong": "3"
+        }
+      ]
+    },
+    {
+      "id": "1cGh8EXKWYrzROArJLNqi",
+      "danhSachSP": [
+        {
+          "masp": "sp005",
+          "soluong": "1"
+        },
+        {
+          "masp": "sp011",
+          "soluong": "4"
         }
       ]
     }
