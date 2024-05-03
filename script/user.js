@@ -27,7 +27,8 @@ logoutBtn.addEventListener("click", event => {
         method: 'PUT',
         body: JSON.stringify({
             id:null,
-            username: ""
+            username: "",
+            role:""
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',

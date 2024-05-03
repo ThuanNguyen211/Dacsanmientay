@@ -50,7 +50,7 @@ function displayProduct(product) {
             <p class="price">${product.price}<sup>đ</sup></p>
             <div">
                 <input type="number" value="1" min="1" id="input_soluong">
-                <button type="submit" class="btn btn-primary" value="${product.masp}" id="addCartBtn">Thêm vào giỏ hàng</button>
+                <button class="btn btn-primary" value="${product.masp}" id="addCartBtn">Thêm vào giỏ hàng</button>
         </div>
     </div>
     `;

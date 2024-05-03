@@ -70,8 +70,8 @@ document.getElementById('signupForm').addEventListener('submit', e => {
         }
         createUser(newUser);
         createCart(newUser.id);
-        alert('Đăng ký thành công!');
         window.location.href = "/login.html";
+        alert('Đăng ký thành công!');
     }
     return ok;
 });

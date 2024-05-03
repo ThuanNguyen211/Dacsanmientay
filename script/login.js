@@ -5,9 +5,9 @@ const checkUser = () => {
     fetch(currentUserAPI)
         .then(res => res.json())
         .then(user => {
-            if (user.id === "admin") {
+            if (user.role === "admin") {
                 window.location.href = "/admin.html";
-            } else if (user.id != null) {
+            } else if (user.role === "user") {
                 window.location.href = "/index.html";
             }
         })
@@ -32,7 +32,7 @@ document.getElementById('loginform').addEventListener('submit', function (e) {
     var password = document.getElementById('password').value;
 
     // Giả sử bạn có một hàm để kiểm tra thông tin đăng nhập
-    var [emailType, ok, userid, usernameString] = checkLogin(email, password);
+    var [emailType, ok, userid, usernameString, role] = checkLogin(email, password);
 
     // Chuyển hướng người dùng dựa trên loại tài khoản
     if (ok) {
@@ -41,7 +41,8 @@ document.getElementById('loginform').addEventListener('submit', function (e) {
             method: 'PUT',
             body: JSON.stringify({
                 id:userid,
-                username: usernameString
+                username: usernameString,
+                role:role
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -50,10 +51,10 @@ document.getElementById('loginform').addEventListener('submit', function (e) {
 
         if (emailType === 'admin') {
             alert('Đăng nhập thành công tài khoản admin!');
-            //window.location.href = "/admin.html";// Thay thế bằng đường dẫn thực tế của bạn
+            window.location.href = "/admin.html";// Thay thế bằng đường dẫn thực tế của bạn
         } else if (emailType === 'user') {
             alert('Đăng nhập thành công tài khoản user!');
-            //window.location.href = '/index.html'; // Thay thế bằng đường dẫn thực tế của bạn
+            window.location.href = '/index.html'; // Thay thế bằng đường dẫn thực tế của bạn
         }
     }
     else {
@@ -68,11 +69,11 @@ function checkLogin(email, password) {
     for (let i = 0; i < userList.length; i++) {
         if (userList[i].email === email && userList[i].password === password) {
             ok = true;
-            if (userList[i].role == "admin") return ["admin", ok, userList[i].id, userList[i].username];
-            else if (userList[i].role == "user") return ["user", ok, userList[i].id, userList[i].username];
+            if (userList[i].role == "admin") return ["admin", ok, userList[i].id, userList[i].username, userList[i].role];
+            else if (userList[i].role == "user") return ["user", ok, userList[i].id, userList[i].username, userList[i].role];
         }
     }
-    return [null, ok, null, null];
+    return [null, ok, null, null, null];
 }
 
 
