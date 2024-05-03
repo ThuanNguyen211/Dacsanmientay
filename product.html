@@ -209,87 +209,7 @@
     </footer>
 
 
-    <script>
-        // Mảng sản phẩm từ file JSON của bạn
-        function fetchProducts() {
-            fetch("JsonServer/product.json") // Thay thế 'path/to/your/products.json' bằng đường dẫn thực tế đến file JSON của bạn
-                .then(response => response.json())
-                .then(data => displayProducts(data))
-                .catch(error => console.error('Lỗi khi lấy dữ liệu:', error));
-        }
-
-        // Gọi hàm để lấy dữ liệu và hiển thị sản phẩm
-        fetchProducts();
-
-        // Hàm để tạo thẻ sản phẩm
-        function createProductCard(product) {
-            const card = document.createElement('div');
-            card.className = 'col-md-3 mb-4'; // Sử dụng lớp Bootstrap cho lưới phản hồi
-            card.innerHTML = 
-            `
-                <div class="card">
-                    <img class="card-img-top" src="${product.photo1}" alt="${product.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <a href="product-detail.html?masp=${product.masp}" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            `;
-            return card;
-        }
-
-        // Hàm để hiển thị tất cả sản phẩm
-        function displayProducts(products) {
-            const container = document.getElementById('product-container');
-            products.forEach(product => {
-                const productCard = createProductCard(product);
-                container.appendChild(productCard);
-            });
-        }
-
-
-        // Gọi hàm hiển thị sản phẩm
-        displayProducts(products);
-    </script>
-    <!-- Back to top -->
-    <script>
-        // Khi người dùng cuộn xuống 20px từ đầu trang, hiển thị nút
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-        // Khi người dùng click vào nút, cuộn lên đầu trang
-        function topFunction() {
-            document.body.scrollTop = 0; // Cho Safari
-            document.documentElement.scrollTop = 0; // Cho Chrome, Firefox, IE và Opera
-        }
-
-    </script>
-
-    <script>
-        function searchProducts() {
-            // Lấy giá trị nhập vào từ thanh tìm kiếm
-            let input = document.getElementById('searchInput').value;
-            input = input.toLowerCase();
-            let productCards = document.getElementById('product-container').getElementsByClassName('col-md-3 mb-4');
-
-            // Lặp qua tất cả các sản phẩm và ẩn những sản phẩm không khớp với từ khóa tìm kiếm
-            for (let i = 0; i < productCards.length; i++) {
-                if (!productCards[i].innerHTML.toLowerCase().includes(input)) {
-                    productCards[i].style.display = "none";
-                } else {
-                    productCards[i].style.display = "";
-                }
-            }
-        }
-
-    </script>
+    <script src="script/product.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -299,5 +219,4 @@
 <script src="script/index.js" type="module"></script>
 <script src="script/swiper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 </html>

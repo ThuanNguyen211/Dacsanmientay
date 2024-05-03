@@ -10,7 +10,6 @@
       "soluong": "10",
       "price": "90000",
       "dvt": "kg",
-      "lohang": "TG001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "16/05/2024",
       "giagoc": "100000",
@@ -19,7 +18,7 @@
       "ngayketthuc": "06/05/2024",
       "type": "traicay",
       "ghichu": "SALE dịp lễ 30/4 - 1/5",
-      "id": "e6e8"
+      "id": "sp001"
     },
     {
       "masp": "sp002",
@@ -31,7 +30,6 @@
       "soluong": "20",
       "price": "20000",
       "dvt": "kg",
-      "lohang": "TG001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
@@ -39,26 +37,41 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "de77"
+      "id": "sp002"
     },
     {
       "masp": "sp003",
       "name": "Sầu riêng Ri 6",
-      "content": "Sầu riêng RI6 - Vua của các loại trái cây. Khi nhắc đến sầu riêng, người ta sẽ liên tưởng đến vị ngọt bùi của sầu riêng miền Tây, đặc biệt là sầu riêng RI6 - vua sầu riêng được biết đến cả trong và ngoài nước. Với hương thơm ngất ngây, màu vàng tươi bắt mắt, sầu riêng RI6 làm say đắm lòng du khách. Mùa quả từ tháng 3 – 5, du khách có thể chiêm ngưỡng vườn sầu riêng trĩu quả ở Cái Mơn Bến Tre hoặc Tiền Giang.",
+      "content": "Sầu riêng Ri6 - Vua của các loại trái cây. Khi nhắc đến sầu riêng, người ta sẽ liên tưởng đến vị ngọt bùi của sầu riêng miền Tây, đặc biệt là sầu riêng RI6 - vua sầu riêng được biết đến cả trong và ngoài nước. Với hương thơm ngất ngây, màu vàng tươi bắt mắt, sầu riêng RI6 làm say đắm lòng du khách. Mùa quả từ tháng 3 – 5, du khách có thể chiêm ngưỡng vườn sầu riêng trĩu quả ở Cái Mơn Bến Tre hoặc Tiền Giang.",
       "price": "150000",
       "photo1": "assets/img/product/traicay/sauriengri6.png",
       "photo2": "assets/img/product/traicay/sauriengri6_2.png",
       "dvt": "kg",
       "soluong": "15",
-      "lohang": "TG001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
       "ngaybatdau": "",
       "ngayketthuc": "",
+      "xuatxu": "Tiền Giang",
       "type": "traicay",
       "ghichu": "",
-      "id": "5cfe"
+      "id": "sp003"
+    },
+    {
+      "masp": "sp004",
+      "content": "Sơ ri Gò Công - Trái cây miền Tây. Sơ ri, loại quả ăn vặt được nhiều người ưa chuộng với quả nhỏ, giá rẻ, vị chua ngọt và màu sắc bắt mắt. Sơ ri tập trung trồng nhiều nhất ở huyện Gò Công Đông, Tiền Giang, mang đến hương vị đặc sắc mà không nơi nào sánh kịp.",
+      "name": "Sơ ri Gò Công",
+      "photo1": "assets/img/product/traicay/sorigocong.png",
+      "photo2": "assets/img/product/traicay/sorigocong_2.png",
+      "price": "25000",
+      "xuatxu": "Tiền Giang",
+      "soluong": "38",
+      "dvt": "kg",
+      "ngaynhap": "29/02/2024",
+      "type": "traicay",
+      "ngayhethan": "25/03/2024",
+      "id": "sp004"
     },
     {
       "masp": "sp005",
@@ -67,17 +80,17 @@
       "price": "29000",
       "dvt": "kg",
       "soluong": "12",
-      "lohang": "LA001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
       "ngaybatdau": "",
+      "xuatxu": "Tiền Giang",
       "ngayketthuc": "",
       "photo1": "assets/img/product/traicay/thanhlongchauthanh.png",
       "photo2": "assets/img/product/traicay/thanhlongchauthanh_2.png",
       "type": "traicay",
       "ghichu": "",
-      "id": "68c9"
+      "id": "sp005"
     },
     {
       "masp": "sp006",
@@ -87,8 +100,8 @@
       "photo2": "assets/img/product/traicay/thanhtra_2.png",
       "price": "68000",
       "dvt": "kg",
+      "xuatxu": "Tiền Giang",
       "soluong": "10",
-      "lohang": "TG001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
@@ -96,7 +109,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "4d3d"
+      "id": "sp006"
     },
     {
       "masp": "sp007",
@@ -106,8 +119,8 @@
       "photo2": "assets/img/product/traicay/thotnotangiang_2.png",
       "price": "60000",
       "dvt": "kg",
+      "xuatxu": "An Giang",
       "soluong": "13",
-      "lohang": "AG001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
@@ -115,10 +128,11 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "ddb7"
+      "id": "sp007"
     },
     {
       "masp": "sp008",
+      "xuatxu": "Tiền Giang",
       "name": "Trái bần",
       "content": "Trái bần - Món ngon dễ kiếm ở miền Tây. Trái bần, quả có hình dáng giống như trái bầu nhỏ, vỏ xanh dày, hơi nhám. Trái bần thường được dùng để làm mứt hoặc ăn trực tiếp. Vị chua ngọt thanh, giòn giòn của trái bần làm người ăn thêm phần mát lạnh, dễ chịu, đặc biệt trong những ngày hè oi bức.",
       "photo1": "assets/img/product/traicay/traiban.png",
@@ -126,7 +140,6 @@
       "price": "15000",
       "dvt": "kg",
       "soluong": "11",
-      "lohang": "MT001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
@@ -134,7 +147,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "2cae"
+      "id": "sp008"
     },
     {
       "masp": "sp009",
@@ -145,7 +158,6 @@
       "price": "24000",
       "dvt": "kg",
       "soluong": "14",
-      "lohang": "MT001",
       "ngaynhap": "20/03/2024",
       "ngayhethan": "14/04/2024",
       "tilegiam": "0%",
@@ -153,7 +165,8 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "5df6"
+      "id": "sp009",
+      "xuatxu": "Tiền Giang"
     },
     {
       "masp": "sp010",
@@ -165,7 +178,6 @@
       "soluong": "18",
       "price": "28000",
       "dvt": "kg",
-      "lohang": "HL001",
       "ngaynhap": "22/03/2024",
       "ngayhethan": "16/04/2024",
       "tilegiam": "0%",
@@ -173,7 +185,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "8fe9"
+      "id": "sp010"
     },
     {
       "masp": "sp011",
@@ -185,7 +197,6 @@
       "soluong": "17",
       "price": "58000",
       "dvt": "kg",
-      "lohang": "BX001",
       "ngaynhap": "23/03/2024",
       "ngayhethan": "17/04/2024",
       "tilegiam": "0%",
@@ -193,7 +204,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "b081"
+      "id": "sp011"
     },
     {
       "masp": "sp012",
@@ -205,7 +216,6 @@
       "soluong": "19",
       "price": "10000",
       "dvt": "kg",
-      "lohang": "CS001",
       "ngaynhap": "18/03/2024",
       "ngayhethan": "12/04/2024",
       "tilegiam": "0%",
@@ -213,7 +223,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "034b"
+      "id": "sp012"
     },
     {
       "masp": "sp013",
@@ -225,7 +235,6 @@
       "soluong": "16",
       "price": "50000",
       "dvt": "kg",
-      "lohang": "CX001",
       "ngaynhap": "19/03/2024",
       "ngayhethan": "13/04/2024",
       "tilegiam": "0%",
@@ -233,7 +242,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "5d33"
+      "id": "sp013"
     },
     {
       "masp": "sp014",
@@ -243,9 +252,8 @@
       "photo1": "assets/img/product/traicay/cansanh_1.png",
       "photo2": "assets/img/product/traicay/canhsanh_2.png",
       "soluong": "22",
-      "price": "50000",
+      "price": "30000",
       "dvt": "kg",
-      "lohang": "CNS001",
       "ngaynhap": "21/03/2024",
       "ngayhethan": "15/04/2024",
       "tilegiam": "0%",
@@ -253,7 +261,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "f902"
+      "id": "sp014"
     },
     {
       "masp": "sp015",
@@ -263,9 +271,8 @@
       "photo2": "assets/img/product/traicay/chomchom_2.png",
       "xuatxu": "Tiền Giang",
       "soluong": "21",
-      "price": "50000",
+      "price": "42000",
       "dvt": "kg",
-      "lohang": "CC001",
       "ngaynhap": "17/03/2024",
       "ngayhethan": "11/04/2024",
       "tilegiam": "0%",
@@ -273,7 +280,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "b7d4"
+      "id": "sp015"
     },
     {
       "masp": "sp016",
@@ -283,9 +290,8 @@
       "photo2": "assets/img/product/traicay/chumruot_2.png",
       "xuatxu": "Tiền Giang",
       "soluong": "24",
-      "price": "50000",
+      "price": "57000",
       "dvt": "kg",
-      "lohang": "CR001",
       "ngaynhap": "16/03/2024",
       "ngayhethan": "10/04/2024",
       "tilegiam": "0%",
@@ -293,7 +299,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "409f"
+      "id": "sp016"
     },
     {
       "masp": "sp017",
@@ -303,9 +309,8 @@
       "photo2": "assets/img/product/traicay/dauhachau_2.png",
       "xuatxu": "Tiền Giang",
       "soluong": "23",
-      "price": "50000",
+      "price": "55000",
       "dvt": "kg",
-      "lohang": "DHC001",
       "ngaynhap": "15/03/2024",
       "ngayhethan": "09/04/2024",
       "tilegiam": "0%",
@@ -313,7 +318,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "8b6c"
+      "id": "sp017"
     },
     {
       "masp": "sp018",
@@ -325,7 +330,6 @@
       "soluong": "25",
       "price": "32000",
       "dvt": "kg",
-      "lohang": "DHLA001",
       "ngaynhap": "14/03/2024",
       "ngayhethan": "08/04/2024",
       "tilegiam": "0%",
@@ -333,7 +337,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "4594"
+      "id": "sp018"
     },
     {
       "masp": "sp019",
@@ -345,7 +349,6 @@
       "soluong": "26",
       "price": "47000",
       "dvt": "kg",
-      "lohang": "DS001",
       "ngaynhap": "13/03/2024",
       "ngayhethan": "07/04/2024",
       "tilegiam": "0%",
@@ -353,7 +356,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "fd26"
+      "id": "sp019"
     },
     {
       "masp": "sp020",
@@ -365,7 +368,6 @@
       "soluong": "20",
       "price": "19000",
       "dvt": "kg",
-      "lohang": "KTP001",
       "ngaynhap": "12/03/2024",
       "ngayhethan": "06/04/2024",
       "tilegiam": "0%",
@@ -373,7 +375,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "829a"
+      "id": "sp020"
     },
     {
       "masp": "sp021",
@@ -385,7 +387,6 @@
       "soluong": "27",
       "price": "21000",
       "dvt": "kg",
-      "lohang": "MAP001",
       "ngaynhap": "11/03/2024",
       "ngayhethan": "05/04/2024",
       "tilegiam": "0%",
@@ -393,7 +394,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "e301"
+      "id": "sp021"
     },
     {
       "masp": "sp022",
@@ -405,7 +406,6 @@
       "soluong": "28",
       "price": "80000",
       "dvt": "kg",
-      "lohang": "MCX001",
       "ngaynhap": "10/03/2024",
       "ngayhethan": "04/04/2024",
       "tilegiam": "0%",
@@ -413,7 +413,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "dda5"
+      "id": "sp022"
     },
     {
       "masp": "sp023",
@@ -425,7 +425,6 @@
       "soluong": "29",
       "price": "90000",
       "dvt": "kg",
-      "lohang": "MCT001",
       "ngaynhap": "09/03/2024",
       "ngayhethan": "03/04/2024",
       "tilegiam": "0%",
@@ -433,7 +432,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "af71"
+      "id": "sp023"
     },
     {
       "masp": "sp024",
@@ -445,7 +444,6 @@
       "soluong": "30",
       "price": "55000",
       "dvt": "kg",
-      "lohang": "MTN001",
       "ngaynhap": "08/03/2024",
       "ngayhethan": "02/04/2024",
       "tilegiam": "0%",
@@ -453,7 +451,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "cfe4"
+      "id": "sp024"
     },
     {
       "masp": "sp025",
@@ -461,11 +459,10 @@
       "name": "Nem chua",
       "photo1": "assets/img/product/traicay/nemchua.png",
       "photo2": "assets/img/product/traicay/nemchua2.png",
-      "xuatxu": "Miền Tây",
+      "xuatxu": "Tây Ninh",
       "soluong": "31",
       "price": "60000",
-      "dvt": "kg",
-      "lohang": "NC001",
+      "dvt": "hộp",
       "ngaynhap": "07/03/2024",
       "ngayhethan": "01/04/2024",
       "tilegiam": "0%",
@@ -473,7 +470,7 @@
       "ngayketthuc": "",
       "type": "thucphamkho",
       "ghichu": "",
-      "id": "cee2"
+      "id": "sp025"
     },
     {
       "masp": "sp026",
@@ -485,7 +482,6 @@
       "soluong": "32",
       "price": "20000",
       "dvt": "kg",
-      "lohang": "NT001",
       "ngaynhap": "06/03/2024",
       "ngayhethan": "31/03/2024",
       "tilegiam": "0%",
@@ -493,7 +489,7 @@
       "ngayketthuc": "",
       "type": "traicay",
       "ghichu": "",
-      "id": "b133"
+      "id": "sp026"
     },
     {
       "masp": "sp027",
@@ -503,8 +499,7 @@
       "xuatxu": "Sóc Trăng",
       "soluong": "33",
       "price": "90000",
-      "dvt": "kg",
-      "lohang": "BPST001",
+      "dvt": "hộp",
       "ngaynhap": "05/03/2024",
       "ngayhethan": "30/03/2024",
       "tilegiam": "0%",
@@ -512,7 +507,7 @@
       "ngayketthuc": "",
       "type": "thucphamkho",
       "ghichu": "",
-      "id": "2526"
+      "id": "sp027"
     },
     {
       "masp": "sp028",
@@ -523,8 +518,7 @@
       "xuatxu": "Cần Thơ",
       "soluong": "34",
       "price": "50000",
-      "dvt": "kg",
-      "lohang": "BTCT001",
+      "dvt": "cái",
       "ngaynhap": "04/03/2024",
       "ngayhethan": "29/03/2024",
       "tilegiam": "0%",
@@ -532,18 +526,17 @@
       "ngayketthuc": "",
       "type": "thucphamkho",
       "ghichu": "",
-      "id": "a056"
+      "id": "sp028"
     },
     {
       "masp": "sp029",
       "content": "Bánh tráng sữa dừa - Món ngon miền Tây. Bánh tráng sữa dừa, loại bánh truyền thống có vị béo, thơm mùi hương nồng nàn. Bánh tráng sữa dừa thường được làm từ bột gạo, sữa, đường, dừa, được nhiều người yêu thích và chọn làm quà biếu.",
       "name": "Bánh tráng sữa dừa",
       "photo1": "assets/img/product/thucphamkho/banh-trang-sua-dua-1.png",
-      "xuatxu": "Miền Tây",
+      "xuatxu": "Bến Tre",
       "soluong": "35",
       "price": "50000",
-      "dvt": "kg",
-      "lohang": "BTSD001",
+      "dvt": "bịch",
       "ngaynhap": "03/03/2024",
       "ngayhethan": "28/03/2024",
       "tilegiam": "0%",
@@ -551,7 +544,7 @@
       "ngayketthuc": "",
       "type": "thucphamkho",
       "ghichu": "",
-      "id": "dac8"
+      "id": "sp029"
     },
     {
       "masp": "sp030",
@@ -559,11 +552,10 @@
       "name": "Kẹo dừa",
       "photo1": "assets/img/product/thucphamkho/keo-dua1.jpg",
       "photo2": "assets/img/product/thucphamkho/keodua2.png",
-      "xuatxu": "Miền Tây",
+      "xuatxu": "Bến Tre",
       "soluong": "36",
       "price": "40000",
-      "dvt": "kg",
-      "lohang": "KD001",
+      "dvt": "hộp",
       "ngaynhap": "02/03/2024",
       "ngayhethan": "27/03/2024",
       "tilegiam": "0%",
@@ -571,63 +563,7 @@
       "ngayketthuc": "",
       "type": "thucphamkho",
       "ghichu": "",
-      "id": "1f85"
-    },
-    {
-      "masp": "sp031",
-      "content": "Kho cá đù - Món ngon miền Tây. Kho cá đù, loại kẹo truyền thống có vị béo, thơm mùi hương nồng nàn. Kho cá đù thường được làm từ dừa, đường, được nhiều người yêu thích và chọn làm quà biếu.",
-      "name": "Kho cá đù",
-      "photo1": "assets/img/product/thucphamkho/khocadu1.jpg",
-      "photo2": "assets/img/product/thucphamkho/khocadu2.jpg",
-      "xuatxu": "Miền Tây",
-      "soluong": "37",
-      "price": "55000",
-      "dvt": "kg",
-      "lohang": "KCD001",
-      "ngaynhap": "01/03/2024",
-      "ngayhethan": "26/03/2024",
-      "tilegiam": "0%",
-      "ngaybatdau": "",
-      "ngayketthuc": "",
-      "type": "thucphamkho",
-      "ghichu": "",
-      "id": "c6c4"
-    },
-    {
-      "masp": "sp032",
-      "content": "Bánh phồng tôm - Món ngon miền Tây. Bánh phồng tôm, loại bánh truyền thống có vị béo, thơm mùi hương nồng nàn. Bánh phồng tôm thường được làm từ phồng tôm, bột gạo, dừa, được nhiều người yêu thích và chọn làm quà biếu.",
-      "name": "Bánh phồng tôm",
-      "photo1": "assets/img/product/thucphamkho/banhphongtom1_1.jpg",
-      "photo2": "assets/img/product/thucphamkho/banhphongtom1_2.jpg",
-      "xuatxu": "Miền Tây",
-      "soluong": "38",
-      "price": "50000",
-      "dvt": "kg",
-      "lohang": "BPT001",
-      "ngaynhap": "29/02/2024",
-      "ngayhethan": "25/03/2024",
-      "tilegiam": "0%",
-      "ngaybatdau": "",
-      "ngayketthuc": "",
-      "ghichu": "",
-      "type": "thucphamkho",
-      "id": "5518"
-    },
-    {
-      "masp": "sp004",
-      "content": "Sơ ri Gò Công - Trái cây miền Tây. Sơ ri, loại quả ăn vặt được nhiều người ưa chuộng với quả nhỏ, giá rẻ, vị chua ngọt và màu sắc bắt mắt. Sơ ri tập trung trồng nhiều nhất ở huyện Gò Công Đông, Tiền Giang, mang đến hương vị đặc sắc mà không nơi nào sánh kịp.",
-      "name": "Sơ ri Gò Công",
-      "photo1": "assets/img/product/traicay/sorigocong.png",
-      "photo2": "assets/img/product/traicay/sorigocong_2.png",
-      "price": "25000",
-      "xuatxu": "Miền Tây",
-      "soluong": "38",
-      "dvt": "kg",
-      "lohang": "BPT001",
-      "ngaynhap": "29/02/2024",
-      "type": "traicay",
-      "ngayhethan": "25/03/2024",
-      "id": "97af"
+      "id": "sp030"
     }
   ],
   "user": [
@@ -651,39 +587,11 @@
       "email": "user2@gmail.com",
       "password": "123",
       "role": "user"
-    },
-    {
-      "id": "1cGh8EXKWYrzROArJLNqi",
-      "username": "user3",
-      "email": "user3@gmail.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "ZibUS1RHDw-4VwJgvmiHV",
-      "username": "123",
-      "email": "user5@gmail.com",
-      "password": "234",
-      "role": "user"
-    },
-    {
-      "id": "_3hq4q00tr4RQva07yNtH",
-      "username": "qưe",
-      "email": "qae@qaeq.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "vGq4Zw9NzmlEaY3qakYzO",
-      "username": "123",
-      "email": "asd@asd.com",
-      "password": "123",
-      "role": "user"
     }
   ],
   "currentUser": {
-    "id": null,
-    "username": ""
+    "id": "admin",
+    "username": "admin"
   },
   "carts": [
     {
