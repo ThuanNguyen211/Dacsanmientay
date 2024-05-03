@@ -1,9 +1,9 @@
 {
   "name": "dac-san-mien-tay",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "json-server --watch JsonServer/database.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,5 +14,6 @@
     "json-server": "^1.0.0-alpha.23",
     "nanoid": "^5.0.7",
     "swiper": "^11.1.1"
-  }
+  },
+  "description": ""
 }

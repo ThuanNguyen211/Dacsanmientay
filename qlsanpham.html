@@ -68,12 +68,23 @@
     <main>
         <div class="container-fluid">
             <h1 class="title">Quản lý sản phẩm</h1>
+
             <div class="admin-info">
+                <div class="filter" style="margin-bottom: 20px">
+                    <select class="form-select" aria-label="Default select example" style="width: 200px; display: inline;">
+                        <option selected value="all">Tất cả</option>
+                        <option value="traicay">Trái cây</option>
+                        <option value="thucphamkho">Thực phẩm khô</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="filter-btn" data-bs-toggle="modal"
+                    data-bs-target="" id="filter-btn">Lọc</button>
+                </div>
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">Mã sp</th>
                             <th scope="col">Tên sp</th>
+                            <th scope="col">Loại</th>
                             <th scope="col">Xuất xứ</th>
                             <th scope="col">Số lượng</th>
                             <th scope="col">Giá bán mỗi sp</th>
@@ -84,78 +95,17 @@
                         </tr>
                     </thead>
                     <tbody class="list">
-                        
+
                     </tbody>
                 </table>
                 <!--Thêm sản phẩm-->
                 <button type="button" class="btn btn-primary" id="themsanpham-btn" data-bs-toggle="modal"
                     data-bs-target="#themsanpham">+ Thêm sản phẩm</button>
 
-            </div>
-
-            <!--Giảm giá -->
-
-            <h1 class="title">Giảm giá</h1>
-            <div class="admin-info">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Mã sp</th>
-                            <th scope="col">Tên sp</th>
-                            <th scope="col">Giá gốc</th>
-                            <th scope="col">Tỉ lệ giảm ( %)</th>
-                            <th scope="col">Giá giảm</th>
-                            <th scope="col">Đơn vị tính</th>
-                            <th scope="col">Ngày bắt đầu</th>
-                            <th scope="col">Ngày kết thúc</th>
-                            <th scope="col">Ghi chú</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"><span>01</span></th>
-                            <td><span>001</span></td>
-                            <td><span>Xoài Cát Hòa Lộc</span></td>
-                            <td><span>100000</span></td>
-                            <td><span>10</span></td>
-                            <td><span>90000</span></td>
-                            <td><span>Kg</span></td>
-                            <td><span>20/03/2024</span></td>
-                            <td><span>04/04/2024</span></td>
-                            <td><span>SALE lô hàng cuối</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span>02</span></th>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span>03</span></th>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-
-                        </tr>
-                    </tbody>
-                </table>
-                <button type="button" class="btn btn-primary" id="themgiamgia-btn" data-bs-toggle="modal"
-                    data-bs-target="#themgiamgia">+ Thêm giảm giá </button>
                 <div class="danhthu">
-                    <h2 id="kho">Kho: </h2>
+                    <div class="chitiet">
+
+                    </div>
                     <div class="bieudo">
                         <div>
                             <canvas id="bieudokho"></canvas>
@@ -163,8 +113,11 @@
                     </div>
                 </div>
 
-
             </div>
+
+
+
+        </div>
 
     </main>
 
@@ -194,24 +147,37 @@
                                 <input type="text" class="form-control" id="tensp" placeholder="Nhập tên sản phẩm">
                             </div>
                             <div class="mb-3">
+                                <label for="type" class="form-label">Loại sản phẩm</label>
+                                <select class="form-select" aria-label="Default select example" id="type">
+                                    <option value="traicay">Trái Cây</option>
+                                    <option value="thucphamkho">Thực phẩm khô</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
                                 <label for="xuatxu" class="form-label">Xuất xứ</label>
                                 <input type="text" class="form-control" id="xuatxu" placeholder="Nhập nơi xuất xứ">
                             </div>
                             <div class="mb-3">
                                 <label for="soluong" class="form-label">Số lượng</label>
-                                <input type="number" class="form-control" id="soluong">
+                                <input type="number" class="form-control" id="soluong" min="1">
                             </div>
                             <div class="mb-3">
                                 <label for="giaban" class="form-label">Giá bán (VND)</label>
-                                <input type="number" class="form-control" id="giaban">
+                                <input type="number" class="form-control" id="giaban" min="0">
                             </div>
                             <div class="mb-3">
                                 <label for="donvitinh" class="form-label">Đơn vị tính</label>
                                 <input type="text" class="form-control" id="donvitinh" placeholder="Đơn vị tính">
                             </div>
                             <div class="mb-3">
-                                <label for="hinhanh" class="form-label">Hình ảnh</label>
-                                <input type="text" class="form-control" id="hinhanh" placeholder="Nhập đường dẫn hình ảnh">
+                                <label for="hinhanh1" class="form-label">Hình ảnh 1</label>
+                                <input type="text" class="form-control" id="hinhanh1"
+                                    placeholder="Nhập đường dẫn hình ảnh 1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="hinhanh2" class="form-label">Hình ảnh 2</label>
+                                <input type="text" class="form-control" id="hinhanh2"
+                                    placeholder="Nhập đường dẫn hình ảnh 2">
                             </div>
                             <div class="mb-3">
                                 <label for="ngaynhap" class="form-label">Ngày nhập</label>
@@ -237,72 +203,6 @@
             </div>
         </div>
     </div>
-
-    <div class="modalgiamgia">
-        <!-- Modal thêm sản phẩm -->
-        <div class="modal" id="themgiamgia">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Thêm giảm giá</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="masp" class="form-label">Mã sản phẩm</label>
-                                <input type="text" class="form-control" id="masp" placeholder="Nhập mã sản phẩm">
-                            </div>
-                            <div class="mb-3">
-                                <label for="tensp" class="form-label">Tên sản phẩm</label>
-                                <input type="text" class="form-control" id="tensp" placeholder="Nhập tên sản phẩm">
-                            </div>
-                            <div class="mb-3">
-                                <label for="giagoc" class="form-label">Giá gốc (VND)</label>
-                                <input type="number" class="form-control" id="giagoc">
-                            </div>
-                            <div class="mb-3">
-                                <label for="tilegiam" class="form-label">Tỉ lệ giảm (%)</label>
-                                <input type="number" class="form-control" id="tilegiam">
-                            </div>
-                            <div class="mb-3">
-                                <label for="giagiam" class="form-label">Giá giảm (VND)</label>
-                                <input type="number" class="form-control" id="giagiam" disabled>
-                            </div>
-                            <div class="mb-3">
-                                <label for="donvitinh" class="form-label">Đơn vị tính</label>
-                                <input type="text" class="form-control" id="donvitinh" placeholder="Đơn vị tính">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ngaybatdau" class="form-label">Ngày bắt đầu</label>
-                                <input type="date" class="form-control" id="ngaybatdau">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ngayketthuc" class="form-label">Ngày kết thúc</label>
-                                <input type="date" class="form-control" id="ngayketthuc">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ghichu" class="form-label">Ghi chú</label>
-                                <textarea class="form-control" id="ghichu" rows="3"></textarea>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="" class="btn btn-primary" data-bs-dismiss="modal">Nhập</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!--Modal sua san pham-->
     <div class="modalsuasp">
@@ -338,7 +238,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="giaban" class="form-label">Giá bán (VND)</label>
-                                <input type="number" class="form-control" id="giaban">
+                                <input type="number" class="form-control" id="giaban" min="0">
                             </div>
                             <div class="mb-3">
                                 <label for="donvitinh" class="form-label">Đơn vị tính</label>
@@ -346,7 +246,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="hinhanh" class="form-label">Hình ảnh</label>
-                                <input type="text" class="form-control" id="hinhanh" placeholder="Nhập đường dẫn hình ảnh mới">
+                                <input type="text" class="form-control" id="hinhanh"
+                                    placeholder="Nhập đường dẫn hình ảnh mới">
                             </div>
                             <div class="mb-3">
                                 <label for="ngaynhap" class="form-label">Ngày nhập</label>
@@ -364,7 +265,8 @@
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btn-update">Lưu</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            id="btn-update">Lưu</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
                     </div>
 
