@@ -692,24 +692,12 @@
       "id": "user2",
       "danhSachSP": [
         {
-          "masp": "sp004",
-          "soluong": "5"
-        },
-        {
           "masp": "sp005",
-          "soluong": "2"
+          "soluong": "6"
         },
         {
           "masp": "sp006",
           "soluong": "3"
-        },
-        {
-          "masp": "sp008",
-          "soluong": "3"
-        },
-        {
-          "masp": "sp010",
-          "soluong": "6"
         }
       ]
     }
