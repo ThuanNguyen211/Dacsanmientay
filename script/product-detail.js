@@ -8,7 +8,7 @@ function fetchProductDetail() {
     fetch("JsonServer/product.json")
         .then(response => response.json())
         .then(products => {
-            const product = products.find(p => p.masp === productId);
+            const product = products.storage.find(p => p.masp === productId);
             displayProduct(product);
             detail(product);
             // addCart(product);
