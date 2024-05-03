@@ -54,9 +54,11 @@ main .container-fluid{
     flex-direction: column;
     align-items: center;
     width: 1000px;
+    
 }
 main .admin-info{
     width: 1200px;
+    
 }
 
 main .sub-title{
@@ -183,4 +185,7 @@ a.active {
 .list{
     background-color: #04AA6D;
 }
+
+/* Kho */
+
 
