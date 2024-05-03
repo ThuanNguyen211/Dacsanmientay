@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Công ty EcoVi</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        h2 {
+    color: #007700; /* Màu xanh lá cây tuyệt đẹp */
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        img {
+            width: 350px;
+        }
+
+        .container-content {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .container-top {
+            display: flex;
+            align-items: center;
+        }
+
+        .container-bottom {
+
+        }
+
+        /* Kiểu dáng cho phần sản phẩm hàng đầu */
+        .top-products h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .top-products .product-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .top-products .product {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+        }
+
+         .product h3 {
+            margin-bottom: 5px;
+        }
+
+         .product p {
+            color: #999;
+        }
+
+        /* Kiểu dáng cho phần sản phẩm hàng đầu 
+        .top-products .product-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }*/
+
+        .top-products .product {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-right: 20px;/* sp 1 2 3*/
+        }
+
+        /* Kiểu dáng cho phần sản phẩm khác */
+        .bottom-products .product-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .bottom-products .product {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-right: 20px;/* cách sp 4 5*/
+        }
+        .product img{
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Công ty Cổ phần Nông nghiệp Sinh thái EcoVi</h1>
+        <nav>
+            <ul>
+                <li><a href="#tam-nhin">Tầm Nhìn</a></li>
+                <li><a href="#su-menh">Sứ Mệnh</a></li>
+                <li><a href="#gioi-thieu">Giới Thiệu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-content">
+        <div class="container-top">
+            <div class="content-section-top">
+                <section id="tam-nhin">
+                    <h2>Tầm Nhìn</h2>
+                    <p>Công ty Cổ phần Nông nghiệp Sinh thái EcoVi, là xây dựng, phát triển và nhân rộng mô hình Làng du
+                        lịch đặc sản sinh thái – nơi đồng hành cùng bà con nông dân làm ra nông sản ngon, lành mạnh và
+                        đáng tin cậy – nơi đồng hành cùng người tiêu dùng, cam kết chất lượng và sự minh bạch của nông
+                        sản – nơi đất, nước, môi trường, hệ sinh thái được trả lại sự trong sạch, cân bằng vốn có.</p>
+                </section>
+                <section id="su-menh">
+                    <h2>Sứ Mệnh</h2>
+                    <p>Gìn giữ, bảo tồn hương vị nguyên bản của nông sản đặc sản quê hương – trên con đường chinh phục
+                        thị trường quốc tế cũng như hướng tới mục tiêu – một đất nước của nền Nông nghiệp Sinh thái.</p>
+                </section>
+            </div>
+            <div class="image">
+                <img src="Banh_phong_tom_Ca_Mau_NaCaMa-127636.jpg" alt="Hình ảnh minh họa">
+            </div>
+        </div>
+        <div class="container-bottom">
+            <section id="gioi-thieu">
+                <h2>Những giá trị cốt lõi</h2>
+                <p>Trở thành thương hiệu đẳng cấp quốc tế trong ngành thực phẩm và đồ uống, nơi mọi người đặt trọn niềm
+                    tin vào các sản phẩm dinh dưỡng và sức khỏe.</p>
+
+            </section>
+        </div>
+        <section class="top-products">
+            <div class="product-container">
+                <div class="product">
+                    <img src="thanhliem.png" alt="Sản phẩm 1">
+                    <h3>THANH LIÊM</h3>
+                    <p>Chính trực và minh bạch trong các hành động và giao dịch.</p>
+                </div>
+                <div class="product">
+                    <img src="tontrong.png" alt="Sản phẩm 2">
+                    <h3>TÔN TRỌNG </h3>
+                    <p>Có tự trọng, tôn trọng đồng nghiệp. Tôn trọng Công ty và các đối tác. Để hợp tác với sự tôn
+                        trọng.</p>
+                </div>
+                <div class="product">
+                    <img src="congbang.png" alt="Sản phẩm 3">
+                    <h3>CÔNG BẰNG</h3>
+                    <p>Công bằng với nhân viên, khách hàng, nhà cung cấp và các bên khác.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-products">
+            <div class="product-container">
+                <div class="product">
+                    <img src="daoduc.png" alt="Sản phẩm 4">
+                    <h3>ĐẠO ĐỨC</h3>
+                    <p>Tôn trọng các tiêu chuẩn đạo đức đã được thiết lập và hành động phù hợp</p>
+                </div>
+                <div class="product">
+                    <img src="tuanthu.png" alt="Sản phẩm 5">
+                    <h3>TUÂN THỦ</h3>
+                    <p>Công bằng với nhân viên, khách hàng, nhà cung cấp và các bên khác.</p>
+                </div>
+            </div>
+        </section>
+        <div class="container-top">
+            <div class="content-section-top">
+                <section id="triet-ly">
+                    <h2>TRIẾT LÝ KINH DOANH</h2>
+                    <p>EcoVi mong muốn trở thành một trong những thương hiệu được yêu thích nhất trên mọi vùng miền và lãnh thổ. Vì vậy, chúng tôi luôn tâm niệm rằng chất lượng và sự đổi mới luôn là những người bạn đồng hành quan trọng nhất của chúng tôi. Chúng tôi hành động với phương pháp lấy khách hàng làm trung tâm và cam kết đáp ứng mọi nhu cầu của họ.</p>
+                </section>
+                <section id="chinh-sach">
+                    <h3>Chính sách chất lượng</h3>
+                    <p>Luôn đáp ứng và có trách nhiệm với nhu cầu của người tiêu dùng bằng cách đa dạng hóa sản phẩm, dịch vụ, bảo đảm chất lượng, an toàn thực phẩm với giá cả cạnh tranh, tôn trọng đạo đức kinh doanh và tuân thủ pháp luật.</p>
+                </section>
+            </div>
+            <div class="image">
+                <img src="quality.png" alt="Hình ảnh minh họa">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoVi. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -5,9 +5,9 @@ const checkUser = () => {
     fetch(currentUserAPI)
         .then(res => res.json())
         .then(user => {
-            if (user.id === "admin") {
+            if (user.role === "admin") {
                 window.location.href = "/admin.html";
-            } else if (user.id != null) {
+            } else if (user.role === "user") {
                 window.location.href = "/index.html";
             }
         })

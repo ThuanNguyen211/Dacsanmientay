@@ -658,6 +658,27 @@
       "email": "user3@gmail.com",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "ZibUS1RHDw-4VwJgvmiHV",
+      "username": "123",
+      "email": "user5@gmail.com",
+      "password": "234",
+      "role": "user"
+    },
+    {
+      "id": "_3hq4q00tr4RQva07yNtH",
+      "username": "qưe",
+      "email": "qae@qaeq.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "vGq4Zw9NzmlEaY3qakYzO",
+      "username": "123",
+      "email": "asd@asd.com",
+      "password": "123",
+      "role": "user"
     }
   ],
   "currentUser": {
@@ -674,7 +695,7 @@
         },
         {
           "masp": "sp005",
-          "soluong": "2"
+          "soluong": 3
         },
         {
           "masp": "sp006",
@@ -687,6 +708,10 @@
         {
           "masp": "sp016",
           "soluong": 11
+        },
+        {
+          "masp": "sp009",
+          "soluong": "3"
         }
       ]
     },
@@ -708,6 +733,10 @@
         {
           "masp": "sp008",
           "soluong": "3"
+        },
+        {
+          "masp": "sp010",
+          "soluong": "6"
         }
       ]
     },
@@ -723,6 +752,18 @@
           "soluong": "4"
         }
       ]
+    },
+    {
+      "id": "ZibUS1RHDw-4VwJgvmiHV",
+      "danhSachSP": []
+    },
+    {
+      "id": "_3hq4q00tr4RQva07yNtH",
+      "danhSachSP": []
+    },
+    {
+      "id": "vGq4Zw9NzmlEaY3qakYzO",
+      "danhSachSP": []
     }
   ]
 }
