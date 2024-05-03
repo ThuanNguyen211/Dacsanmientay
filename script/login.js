@@ -63,7 +63,7 @@ document.getElementById('loginform').addEventListener('submit', function (e) {
 });
 
 function checkLogin(email, password) {
-    console.log(userList);
+    //console.log(userList);
     let ok = false;
     for (let i = 0; i < userList.length; i++) {
         if (userList[i].email === email && userList[i].password === password) {
@@ -72,7 +72,7 @@ function checkLogin(email, password) {
             else if (userList[i].role == "user") return ["user", ok, userList[i].id, userList[i].username];
         }
     }
-    return null;
+    return [null, ok, null, null];
 }
 
 
