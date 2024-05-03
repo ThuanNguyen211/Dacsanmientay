@@ -651,18 +651,11 @@
       "email": "user2@gmail.com",
       "password": "123",
       "role": "user"
-    },
-    {
-      "id": "1cGh8EXKWYrzROArJLNqi",
-      "username": "user3",
-      "email": "user3@gmail.com",
-      "password": "123",
-      "role": "user"
     }
   ],
   "currentUser": {
-    "id": null,
-    "username": ""
+    "id": "user2",
+    "username": "username2"
   },
   "carts": [
     {
