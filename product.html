@@ -89,6 +89,12 @@
             <!-- <div class="search-container">
               <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Tìm kiếm sản phẩm...">
             </div> -->
+            <div id="type">
+                <button type="button" class="btn btn-success" onclick="searchAll()">Tất cả</button>
+                <button type="button" class="btn btn-success" onclick="searchTraiCay()">Trái Cây</button>
+                <button type="button" class="btn btn-success" onclick="searchThucPhamKho()">Thực phẩm khô</button>
+            </div>
+            <br>
             <div class="row" id="product-container">
                 <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
             </div>
@@ -99,6 +105,7 @@
         <span class="top-text">Top</span>
     </button>
     <footer class="mt-5">
+
         <div class="container-lg justify-content-center">
             <div class="card mb-3 shadow">
                 <div class="row g-0">
@@ -201,6 +208,7 @@
         </div>
     </footer>
 
+
     <script>
         // Mảng sản phẩm từ file JSON của bạn
         function fetchProducts() {
@@ -238,6 +246,7 @@
                 container.appendChild(productCard);
             });
         }
+
 
         // Gọi hàm hiển thị sản phẩm
         displayProducts(products);
@@ -283,6 +292,7 @@
     </script>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 <script src="https://kit.fontawesome.com/965ecd562f.js" crossorigin="anonymous"></script>
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>

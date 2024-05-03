@@ -4,6 +4,7 @@ const productId = params.get('masp');
 
 // Hàm để lấy dữ liệu sản phẩm và hiển thị chi tiết
 function fetchProductDetail() {
+
     fetch("JsonServer/product.json")
         .then(response => response.json())
         .then(products => {
@@ -13,6 +14,7 @@ function fetchProductDetail() {
             // addCart(product);
         })
         .catch(error => console.error('Lỗi khi lấy dữ liệu:', error));
+
 }
 
 function displayProduct(product) {
