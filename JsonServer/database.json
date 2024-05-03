@@ -644,6 +644,53 @@
       "email": "user1@gmail.com",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "user2",
+      "username": "username2",
+      "email": "user2@gmail.com",
+      "password": "123",
+      "role": "user"
+    }
+  ],
+  "currentUser": {
+    "id": "user2",
+    "username": "username2"
+  },
+  "carts": [
+    {
+      "id": "user1",
+      "danhSachSP": [
+        {
+          "idsp": "sp001",
+          "soluong": 2
+        },
+        {
+          "idsp": "sp002",
+          "soluong": 3
+        },
+        {
+          "idsp": "sp003",
+          "soluong": 1
+        }
+      ]
+    },
+    {
+      "id": "user2",
+      "danhSachSP": [
+        {
+          "idsp": "sp004",
+          "soluong": 5
+        },
+        {
+          "idsp": "sp005",
+          "soluong": 2
+        },
+        {
+          "idsp": "sp006",
+          "soluong": 3
+        }
+      ]
     }
   ]
 }

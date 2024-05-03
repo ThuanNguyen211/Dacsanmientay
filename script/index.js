@@ -1,14 +1,23 @@
-import products from '../assets/product.json' assert { type: 'json' };
-const demoProducts = products.slice(0, 6);
-// console.log(demoProduct);
-const demo_grid = document.querySelector("#demo_grid");
+const productAPI = "http://localhost:3000/storage";
+let products = [];
+async function getProduct(callback) {
+    fetch(productAPI)
+        .then(res => res.json())
+        .then(callback)
+}
 
-demoProducts.forEach(product => {
-    let card = document.createElement("div");
-    card.className = "productItem";
 
-    card.innerHTML = 
-    `
+const printDemoProduct = (products) => {
+    const demoProducts = products.slice(0, 6);
+
+    const demo_grid = document.querySelector("#demo_grid");
+
+    demoProducts.forEach(product => {
+        let card = document.createElement("div");
+        card.className = "productItem";
+
+        card.innerHTML =
+            `
     <a href="#" class="productThumbnail">
                                 <img src=${product.photo1} alt="">
                             </a>
@@ -28,6 +37,29 @@ demoProducts.forEach(product => {
                                 <i class="bi bi-star-fill"></i>
                             </div>
     `
-    
-    demo_grid.appendChild(card);
+
+        demo_grid.appendChild(card);
+    })
+}
+
+getProduct(printDemoProduct);
+
+//--------- Gio hang ------------------
+const currentUserAPI = "http://localhost:3000/currentUser";
+function getCurrentUser(callback) {
+    fetch(currentUserAPI)
+        .then(res => res.json())
+        .then(callback);
+}
+
+getCurrentUser(user => {
+    if (user.id != null) {
+        let link_taikhoan = document.querySelector("#link_taikhoan");
+        link_taikhoan.href = "user.html";
+        link_taikhoan.innerHTML = 
+        `
+        <i class="bi bi-person-circle pe-2"></i>
+        Xin chào ${user.username}
+        `
+    }
 })
