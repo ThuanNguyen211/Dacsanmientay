@@ -5,7 +5,7 @@ const productId = params.get('masp');
 // Hàm để lấy dữ liệu sản phẩm và hiển thị chi tiết
 function fetchProductDetail() {
 
-    fetch("JsonServer/product.json")
+    fetch("JsonServer/database.json")
         .then(response => response.json())
         .then(products => {
             const product = products.storage.find(p => p.masp === productId);
