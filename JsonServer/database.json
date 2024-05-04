@@ -676,37 +676,76 @@
   "carts": [
     {
       "id": "user1",
-      "danhSachSP": [
-        {
-          "masp": "sp018",
-          "soluong": "10"
-        },
+      "danhSachSP": []
+    },
+    {
+      "id": "user2",
+      "danhSachSP": []
+    }
+  ],
+  "hoadons": [
+    {
+      "id": "ruQTL3a5pO",
+      "userid": "user1",
+      "username": "username1",
+      "diachi": "vn2",
+      "sdt": "0123",
+      "timeSubmit": "5/4/2024, 3:59:29 PM",
+      "thanhTien": "626000",
+      "PTthanhtoan": "COD",
+      "cart": [
         {
           "masp": "sp013",
           "soluong": "8"
         },
         {
           "masp": "sp020",
-          "soluong": "1"
+          "soluong": "2"
         },
         {
           "masp": "sp019",
-          "soluong": 4
+          "soluong": "4"
         }
-      ]
+      ],
+      "trangThai": "choduyet"
     },
     {
-      "id": "user2",
-      "danhSachSP": [
+      "id": "9RvIQ9sAxT",
+      "username": "username2",
+      "userid": "user2",
+      "diachi": "vn",
+      "sdt": "123",
+      "timeSubmit": "5/4/2024, 4:23:03 PM",
+      "thanhTien": "149000",
+      "PTthanhtoan": "COD",
+      "cart": [
         {
           "masp": "sp005",
-          "soluong": "6"
+          "soluong": "1"
         },
         {
-          "masp": "sp006",
-          "soluong": "3"
+          "masp": "sp007",
+          "soluong": "2"
         }
-      ]
+      ],
+      "trangThai": "choduyet"
+    },
+    {
+      "id": "CDobJwW9cK",
+      "userid": "user2",
+      "username": "username2",
+      "diachi": "việt nam",
+      "sdt": "12345",
+      "timeSubmit": "5/4/2024, 6:29:02 PM",
+      "thanhTien": "600000",
+      "PTthanhtoan": "chuyenkhoan",
+      "cart": [
+        {
+          "masp": "sp003",
+          "soluong": "4"
+        }
+      ],
+      "trangThai": "choduyet"
     }
   ]
 }

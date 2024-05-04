@@ -97,65 +97,24 @@
                             <th scope="col">SĐT giao hàng</th>
                             <th scope="col">Thời gian tạo</th>
                             <th scope="col">Thành tiền</th>
+                            <th scope="col">Phương thức thanh toán</th>
                             <th scope="col">Trạng thái</th>
                             <th scope="col">Chi tiết</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"><span>001</span></th>
-                            <td><span>Nguyễn Văn B</span></td>
-                            <td><span>Phong Điền, Cần Thơ</span></td>
-                            <td><span>0864652487</span></td>
-                            <td><span>20:30 14/03/2024</span></td>
-                            <td><span>200000</span></td>
-                            <td>
-                                <select class="form-select-sm" aria-label="Default select example">
-                                    <option value="cho_duyet">Chờ duyệt</option>
-                                    <option value="da_duyet">Đã duyệt</option>
-                                    <option value="dang_giao">Đang giao</option>
-                                    <option value="da_giao">Đã giao</option>
-                                    <option value="da_huy">Đã hủy</option>
-                                </select>
-                            </td>
-                            <td><a href="#" id="hoadon-link" data-bs-toggle="modal" data-bs-target="#hoadon">Xem chi
-                                    tiết hóa đơn....</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span>002</span></th>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row"><span>003</span></th>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-
-                        </tr>
+                    <tbody id="hoadon_table">
+                        <!-- chèn bằng JS -->
                     </tbody>
                 </table>
             </div>
 
-            <div class="danhthu">
-                <h2 id="danhthu">Tổng danh thu tháng: </h2>
-                <h2>2000000</h2>
+            <div class="doanhthu">
+                <h2 id="doanhthu">Tổng danh thu tháng: </h2>
             </div>
             </div>
         </div>
     </main>
-    <div class="modalhoadon">
+    <div id="modalhoadons">
         <!-- Modal thêm sản phẩm -->
         <div class="modal" id="hoadon">
             <div class="modal-dialog modal-dialog-centered modal-fullscreen">
@@ -335,5 +294,6 @@
     
 </body>
 <script src="script/admin.js"></script>
+<script src="script/qldonhang.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>

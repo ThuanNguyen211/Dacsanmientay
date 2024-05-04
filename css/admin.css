@@ -78,7 +78,7 @@ a.active {
 
 /* ------------------------- Trang don hang ----------------------------*/
 
-.danhthu {
+.doanhthu {
     display: flex;
     gap: 0px 40px;
 }
@@ -90,6 +90,29 @@ a.active {
 
 .modal .active {
     display: block;
+}
+
+.sp_container {
+    max-height: 200px;
+    margin: 10px 0;
+    display: flex;
+}
+
+.spImg_container {
+    width: 100px;
+    height: 125px;
+}
+
+.spInfo_container {}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.price {
+    color: #e8491d;
+    font-weight: bold;
 }
 
 
