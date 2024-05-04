@@ -609,9 +609,9 @@
     }
   ],
   "currentUser": {
-    "id": "user2",
-    "username": "username2",
-    "role": "user"
+    "id": null,
+    "username": "",
+    "role": ""
   },
   "carts": [
     {
