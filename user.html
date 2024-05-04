@@ -80,15 +80,87 @@
     <main>
         <div class="container-lg">
             <button class="d-block btn btn-danger fs-4 shadow-sm mt-2" id="logout">Đăng xuất</button>
-            <h1>Giỏ hàng</h1>
-            <div id="cart">
-            </div>
-            <div id="total_container">
+            <section>
+                <h1>Giỏ hàng</h1>
+                <div class="table-responsive">
+                    <table
+                        class="table align-middle table-nowrap table-centered mb-0">
+                        <thead>
+                            <tr>
+                                
+                                <th>Sản phẩm</th>
+                                <th>Giá</th>
+                                <th class="text-center">Số lượng</th>
+                                <th class="text-end" style="width: 120px;">Tổng</th>
+                                <th></th>
+                            </tr>
+                        </thead><!-- end thead -->
+                        <tbody id="cart_container">
+                            
+                        </tbody><!-- end tbody -->
+                    </table><!-- end table -->
+                </div><!-- end table responsive -->
+                <div id="total_container">
+    
+                </div>
+                <button class="d-block btn btn-success fs-4 shadow-sm mt-2" id="dathang" data-bs-toggle="modal"
+                data-bs-target="#chi_tiet_don_hang">Đặt hàng</button>
+            </section>
+            <section>
+                <h1>Đơn hàng</h1>
+                <div id="donhang">
 
-            </div>
-            <button class="d-block btn btn-success fs-4 shadow-sm mt-2" id="dathang">Đặt hàng</button>
+                </div>
+            </section>
+            
         </div>
     </main>
+
+    <div class="modal_don_hang">
+        <!-- Modal don hang -->
+        <div class="modal" id="chi_tiet_don_hang">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Chi tiết đơn hàng</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="">
+                            
+                            <div class="mb-3">
+                                <label for="diachi" class="form-label">Địa chỉ</label>
+                                <input type="text" class="form-control" id="diachi" placeholder="Nhập địa chỉ nhận hàng">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sdt" class="form-label">Số điện thoại</label>
+                                <input type="number" class="form-control" id="sdt" placeholder="Nhập số điện thoại có thể liên lạc được">
+                            </div>
+                            <div class="mb-3">
+                                <label for="PTthanhtoan" class="form-label">Phương thức thanh toán</label>
+                                <select class="form-select" aria-label="Default select example" id="PTthanhtoan">
+                                    <option value="COD">Cash on Delivery (COD)</option>
+                                    <option value="chuyenkhoan">Chuyển khoản</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="btn_dathang">Đặt hàng</button>
+                        <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Huỷ</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="mt-5">
         <div class="container-lg justify-content-center">
             <div class="card mb-3 shadow">
@@ -193,7 +265,7 @@
 <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>
 <script src="script/swiper.js"></script>
-<script src="script/user.js"></script>
+<script src="script/user.js" type="module"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
