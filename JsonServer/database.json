@@ -654,8 +654,8 @@
     }
   ],
   "currentUser": {
-    "id": "user2",
-    "username": "username2",
+    "id": "user1",
+    "username": "username1",
     "role": "user"
   },
   "carts": [
@@ -663,16 +663,8 @@
       "id": "user1",
       "danhSachSP": [
         {
-          "masp": "sp001",
-          "soluong": "2"
-        },
-        {
-          "masp": "sp005",
-          "soluong": 3
-        },
-        {
           "masp": "sp006",
-          "soluong": "3"
+          "soluong": "5"
         },
         {
           "masp": "sp003",
@@ -680,10 +672,10 @@
         },
         {
           "masp": "sp016",
-          "soluong": 11
+          "soluong": "8"
         },
         {
-          "masp": "sp009",
+          "masp": "sp007",
           "soluong": "3"
         }
       ]

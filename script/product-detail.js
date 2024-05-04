@@ -169,6 +169,16 @@ const addCart = () => {
     const addCartBtn = $("#addCartBtn");
     addCartBtn.addEventListener("click", event => {
         event.preventDefault();
+
+        //kiem tra da dang nhap chua
+        getCurrentUser(user => {
+            if (user.id == null) {
+                window.location.href = "login.html";
+                alert("vui lòng đăng nhập trước khi thêm vào giỏ hàng");
+
+            }
+        })
+
         const masp = addCartBtn.value;
         let soluong = $("#input_soluong").value;
         let done = false;
@@ -179,16 +189,15 @@ const addCart = () => {
                     danhSachSP[i].soluong = parseInt(danhSachSP[i].soluong) + parseInt(soluong);
                     done = true;
                     addCartAPI(danhSachSP);
+                    alert("đã thêm sản phẩm vào giỏ hàng");
                 }
             }
             if (!done) {
                 danhSachSP.push({"masp":masp, "soluong": soluong});
                 addCartAPI(danhSachSP);
+                alert("đã thêm sản phẩm vào giỏ hàng");
             }
         })
-        
-        alert("đã thêm sản phẩm vào giỏ hàng")
-
     })
 }
 setTimeout(addCart, 1000)

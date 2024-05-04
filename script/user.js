@@ -18,6 +18,9 @@ getCurrentUser(user => {
         <i class="bi bi-person-circle pe-2"></i>
         Xin chào ${user.username}
         `
+    } else {
+        window.location.href = "login.html";
+        alert("Vui lòng đăng nhập");
     }
 })
 //-----------------------Log out -----------------------
