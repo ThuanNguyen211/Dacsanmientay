@@ -59,9 +59,9 @@ getHoadon(danhsachHD => {
                                             <div class="card-body">
                                                 <div class="invoice-title">
                                                     <h4 class="float-end font-size-15"><span
-                                                            class="badge bg-success font-size-12 ms-2">Đã thanh toán</span></h4>
+                                                            class="badge bg-success font-size-12 ms-2">${hoadon.trangThai}</span></h4>
                                                     <div class="mb-4">
-                                                        <h2 class="mb-1 text-muted">Tên doanh nghiệp</h2>
+                                                        <h2 class="mb-1 text-muted">Đặc sản quê</h2>
                                                     </div>
                                                     <div class="text-muted">
                                                         <p class="mb-1">KN3T - VietNam Food</p>
