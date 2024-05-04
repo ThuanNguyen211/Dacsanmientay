@@ -401,7 +401,7 @@ function validation(masp, name, xuatxu, soluong, giagoc, dvt, ngaynhap, ngayheth
         alert("Vui lòng nhập đầy đủ ngày nhập và ngày hết hạn");
         return false;
     }
-    if (hinhanh1.length == 0 && hinhanh2.length == 0) {
+    if (hinhanh1 == 'undefine' && hinhanh2 == 'undefine') {
         alert("Vui lòng thêm ít nhất 1 hình ảnh");
         return false;
     }

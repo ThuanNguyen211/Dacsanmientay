@@ -626,7 +626,20 @@
     },
     {
       "id": "user2",
-      "danhSachSP": []
+      "danhSachSP": [
+        {
+          "masp": "sp001",
+          "soluong": "4"
+        },
+        {
+          "masp": "sp004",
+          "soluong": "5"
+        },
+        {
+          "masp": "sp006",
+          "soluong": "4"
+        }
+      ]
     }
   ],
   "hoadons": [
@@ -692,6 +705,31 @@
       "cart": [
         {
           "masp": "sp003",
+          "soluong": "4"
+        }
+      ],
+      "trangThai": "choduyet"
+    },
+    {
+      "id": "hd1",
+      "userid": "user2",
+      "username": "username2",
+      "diachi": "Nhơn Bình, Nhơn Ái",
+      "sdt": "01929202330",
+      "timeSubmit": "5/4/2024, 7:23:43 PM",
+      "thanhTien": "757000",
+      "PTthanhtoan": "chuyenkhoan",
+      "cart": [
+        {
+          "masp": "sp001",
+          "soluong": "4"
+        },
+        {
+          "masp": "sp004",
+          "soluong": "5"
+        },
+        {
+          "masp": "sp006",
           "soluong": "4"
         }
       ],
