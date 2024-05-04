@@ -663,20 +663,12 @@
       "id": "user1",
       "danhSachSP": [
         {
-          "masp": "sp006",
-          "soluong": "5"
+          "masp": "sp018",
+          "soluong": "10"
         },
         {
-          "masp": "sp003",
-          "soluong": 2
-        },
-        {
-          "masp": "sp016",
+          "masp": "sp013",
           "soluong": "8"
-        },
-        {
-          "masp": "sp007",
-          "soluong": "3"
         }
       ]
     },
