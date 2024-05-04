@@ -654,9 +654,9 @@
     }
   ],
   "currentUser": {
-    "id": "user1",
-    "username": "username1",
-    "role": "user"
+    "id": null,
+    "username": "",
+    "role": ""
   },
   "carts": [
     {
@@ -669,6 +669,14 @@
         {
           "masp": "sp013",
           "soluong": "8"
+        },
+        {
+          "masp": "sp020",
+          "soluong": "1"
+        },
+        {
+          "masp": "sp019",
+          "soluong": 4
         }
       ]
     },

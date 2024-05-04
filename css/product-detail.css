@@ -41,3 +41,15 @@
   text-align: left;
   
 }
+.product-info .addcart{
+  margin-top: 10px;
+}
+.product-info input {
+  margin-left: 10px;
+  width: 50px;
+}
+.product-info button {
+  margin-left: 10px;
+  width: 350px;
+  font-size: 21px;
+}

@@ -1,6 +1,6 @@
 // Mảng sản phẩm từ file JSON của bạn
 function fetchProducts() {
-    fetch("JsonServer/product.json") // Thay thế 'path/to/your/products.json' bằng đường dẫn thực tế đến file JSON của bạn
+    fetch("JsonServer/database.json") // Thay thế 'path/to/your/products.json' bằng đường dẫn thực tế đến file JSON của bạn
       .then(response => response.json())
       .then(data => displayProducts(data.storage))
       .catch(error => console.error('Lỗi khi lấy dữ liệu:', error));

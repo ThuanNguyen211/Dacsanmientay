@@ -41,7 +41,7 @@ const productId = params.get('masp');
 // Hàm để lấy dữ liệu sản phẩm và hiển thị chi tiết
 function fetchProductDetail() {
 
-    fetch("JsonServer/product.json")
+    fetch("JsonServer/database.json")
         .then(response => response.json())
         .then(products => {
             const product = products.storage.find(p => p.masp === productId);
@@ -82,11 +82,13 @@ function displayProduct(product) {
             <!-- Carousel end -->
         </div>
         <div class="product-info">
-            <h2>${product.name}</h2>
-            <p class="price">${product.price}<sup>đ</sup></p>
-            <div">
+            <h1>${product.name}</h1>
+            <h5 class="price">Giá : ${product.price}<sup>đ</sup>/${product.dvt}</h5>
+            <p>Mô tả : ${product.content}</p>
+            <div class="addcart">
                 <input type="number" value="1" min="1" id="input_soluong">
                 <button class="btn btn-primary" value="${product.masp}" id="addCartBtn">Thêm vào giỏ hàng</button>
+            </div>
         </div>
     </div>
     `;

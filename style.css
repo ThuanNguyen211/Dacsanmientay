@@ -253,22 +253,3 @@ footer h3 {
 #footer-certificate img:nth-child(3) {
     height: 55px;
 }
-/* Thuan */
-/* Định dạng CSS cơ bản cho trang sản phẩm */
-.product-card {
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 20px;
-    transition: box-shadow 0.3s;
-  }
-  .product-card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
-  .product-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  .price {
-    color: #e8491d;
-    font-weight: bold;
-  }
