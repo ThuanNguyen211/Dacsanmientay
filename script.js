@@ -15,6 +15,7 @@ function getStorage(callback) {
 }
 // Mảng chứa mã sản phẩm đã có
 var arrayMasp = [];
+var tong = 0;
 
 function renderStorage(storage) {
     var list = document.querySelector('.list');
@@ -23,6 +24,7 @@ function renderStorage(storage) {
         if (!arrayMasp.includes(storage.masp)) {
             arrayMasp.push(storage.masp);
         }
+        tong = tong + parseInt(storage.soluong);
         return `
         <tr>
                             <th scope="row"><span>${storage.masp}</span></th>
@@ -46,6 +48,7 @@ function renderStorage(storage) {
     })
 
     list.innerHTML = html.join('');
+
 }
 
 getStorage(renderStorage);
@@ -91,7 +94,8 @@ function addProduct() {
         let hinhanh1 = document.querySelector(".modalsp #hinhanh1").value;
         let hinhanh2 = document.querySelector(".modalsp #hinhanh2").value;
 
-
+        let check = validation(masp, name, xuatxu, soluong, giagoc, dvt, ngaynhap, ngayhethan, hinhanh1, hinhanh2, tong);
+        if (check == false) return;
 
         if (!arrayMasp.includes(masp)) {
             var sp = {
@@ -113,8 +117,11 @@ function addProduct() {
         } else {
             alert("Sản phẩm đã có trong kho, vui lòng sửa sản phẩm!");
         }
-
     }
+
+
+
+
 }
 
 addProduct()
@@ -172,6 +179,8 @@ function UpdateProduct(id) {
                     let ngaynhap = document.querySelector(".modalsuasp #ngaynhap").value;
                     let ngayhethan = document.querySelector(".modalsuasp #ngayhethan").value;
                     let hinhanh = document.querySelector(".modalsuasp #hinhanh").value;
+                    let check = validation(e.masp, e.name, e.xuatxu, e.soluong, e.giagoc, e.dvt, e.ngaynhap, e.ngayhethan, e.hinhanh1, e.hinhanh2, tong);
+                    if (check == false) return;
                     // Ban đầu gán thuộc tính mới bằng thuộc tính cũ
                     var updatesp = {
                         id: e.id,
@@ -315,7 +324,7 @@ function taoBieuDo(dungtichkho) {
 
         })
 }
-
+// Giả sử dung tích kho là 1000
 taoBieuDo(1000);
 
 
@@ -325,12 +334,12 @@ function filter() {
             return response.json();
         })
         .then(function (storage) {
-            let type = document.querySelector(".filter select").value;
 
+            let type = document.querySelector(".filter #type-filter").value;
             var list = document.querySelector('.list');
 
             var html = storage.map(function (storage) {
-                if (storage.type == type) {
+                if (storage.type == type || type == 'all') {
                     return `
                         <tr>
                             <th scope="row"><span>${storage.masp}</span></th>
@@ -358,3 +367,45 @@ function filter() {
         });
 }
 
+
+// Form validation
+
+function validation(masp, name, xuatxu, soluong, giagoc, dvt, ngaynhap, ngayhethan, hinhanh1, hinhanh2, tong) {
+    if (tong + parseInt(soluong) > 1000) {
+        alert("Không đủ diện tích kho chứa");
+        return false;
+    }
+    if (masp.length == 0) {
+        alert("Vui lòng nhập mã sản phẩm");
+        return false;
+    }
+    if (name.length == 0) {
+        alert("Vui lòng nhập tên sản phẩm");
+        return false;
+    }
+    if (xuatxu.length == 0) {
+        alert("Vui lòng nhập xuất xứ sản phẩm");
+        return false;
+    }
+    if (soluong == 0) {
+        alert("Vui lòng nhập số lượng sản phẩm");
+        return false;
+    }
+
+    if (giagoc == 0) {
+        alert("Vui lòng nhập giá gốc sản phẩm");
+        return false;
+    }
+    if (dvt.length == 0) {
+        alert("Vui lòng nhập đơn vị tính");
+        return false;
+    }
+    if (ngaynhap.length == 0 || ngayhethan.length == 0) {
+        alert("Vui lòng nhập đầy đủ ngày nhập và ngày hết hạn");
+        return false;
+    }
+    if (hinhanh1.length == 0 && hinhanh2.length == 0) {
+        alert("Vui lòng thêm ít nhất 1 hình ảnh");
+        return false;
+    }
+}
