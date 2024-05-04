@@ -96,17 +96,20 @@ a.active {
     max-height: 200px;
     margin: 10px 0;
     display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .spImg_container {
     width: 100px;
     height: 125px;
+    display: flex;
 }
 
 .spInfo_container {}
 
-img {
-    height: 100%;
+.spImg_container img {
+    width: 100%;
     object-fit: cover;
 }
 
