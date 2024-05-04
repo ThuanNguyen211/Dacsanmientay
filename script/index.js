@@ -18,7 +18,7 @@ const printDemoProduct = (products) => {
 
         card.innerHTML =
             `
-    <a href="#" class="productThumbnail">
+    <a href="product-detail.html?masp=${product.masp}" class="productThumbnail">
                                 <img src=${product.photo1} alt="">
                             </a>
                             <p class="text-center m-0" style="color: #dc2626">
