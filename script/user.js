@@ -257,7 +257,7 @@ function xoacart() {
         }).then(() => alert("Đặt hàng thành công"));
     })
 }
-
+// Thêm thuộc tính vào hóa đơn
 function addHoadons(hoadon) {
     fetch(hoadonAPI, {
         method: 'POST',
@@ -272,10 +272,12 @@ function addHoadons(hoadon) {
 
 
 const btn_dathang = $("#btn_dathang");
+var index = 0;
 btn_dathang.addEventListener("click", (event) => {
     event.preventDefault();
+    index++;
 
-    const mahoadon = nanoid(10);
+    const mahoadon = "hd" + index;
     const diachi = $("#diachi").value;
     const sdt = $("#sdt").value;
     const PTthanhtoan = $("#PTthanhtoan").value;
