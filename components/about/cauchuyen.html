@@ -142,13 +142,64 @@
 
 <body>
     <header>
-        <h1>Công ty Cổ phần Nông nghiệp Sinh thái EcoVi</h1>
-        <nav>
-            <ul>
-                <li><a href="#tam-nhin">Tầm Nhìn</a></li>
-                <li><a href="#su-menh">Sứ Mệnh</a></li>
-                <li><a href="#gioi-thieu">Giới Thiệu</a></li>
-            </ul>
+        <div class="top-bar d-flex justify-content-between align-content-center text-light px-5 py-1"
+            style="background: var(--bs-secondary);">
+            <div class="d-flex ms-5 fs-6 ">
+                <a href="login.html" class="text-light" id="link_taikhoan">
+                    <i class="bi bi-person-circle pe-2"></i>
+                    Tài khoản & đơn hàng
+                </a>
+                <div class="ps-3 ms-3 border-start">
+
+                    <a href="mailto:info@dacsanque.com" class="text-light">
+                        <i class="bi bi-envelope"></i>
+                        info@dacsanque.com
+                    </a>
+                </div>
+            </div>
+            <div class="fs-5">
+                <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-tiktok px-2"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid px-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand ms-lg-5" href="index.html"><img src="assets/img/web-component/logo-transparent.png" alt=""
+                        id="logo"></a>
+                
+                <div class="collapse navbar-collapse justify-content-between px-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <div class="d-flex link-page">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GIỚI THIỆU</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="product.html">SẢN PHẨM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">LIÊN HỆ</a>
+                            </li>
+                        </div>
+                    </ul>
+                    
+                </div>
+                <div class="d-flex align-content-center gap-3">
+                        <a href="product.html"><i class="bi bi-search fs-3 text-dark"></i></a>
+                        <a href="#" id="cart_icon"><i class="bi bi-cart3 fs-3 text-dark"></i></a>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="container-content">
