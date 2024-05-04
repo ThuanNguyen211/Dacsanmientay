@@ -692,52 +692,6 @@
       "trangThai": "choduyet"
     },
     {
-      "id": "hd1",
-      "userid": "user2",
-      "username": "username2",
-      "diachi": "Nhơn Bình, Nhơn Ái",
-      "sdt": "01929202330",
-      "timeSubmit": "5/4/2024, 7:23:43 PM",
-      "thanhTien": "757000",
-      "PTthanhtoan": "chuyenkhoan",
-      "cart": [
-        {
-          "masp": "sp001",
-          "soluong": "4"
-        },
-        {
-          "masp": "sp004",
-          "soluong": "5"
-        },
-        {
-          "masp": "sp006",
-          "soluong": "4"
-        }
-      ],
-      "trangThai": "choduyet"
-    },
-    {
-      "id": "hd1",
-      "userid": "user1",
-      "username": "username1",
-      "diachi": "qwe",
-      "sdt": "0123",
-      "timeSubmit": "5/4/2024, 8:14:26 PM",
-      "thanhTien": "373000",
-      "PTthanhtoan": "COD",
-      "cart": [
-        {
-          "masp": "sp019",
-          "soluong": "3"
-        },
-        {
-          "masp": "sp011",
-          "soluong": "4"
-        }
-      ],
-      "trangThai": "choduyet"
-    },
-    {
       "id": "T5US8zxL7L",
       "userid": "user2",
       "username": "username2",
