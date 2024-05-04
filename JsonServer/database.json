@@ -628,6 +628,21 @@
       "type": "traicay",
       "ngayhethan": "25/03/2024",
       "id": "97af"
+    },
+    {
+      "id": "sp100",
+      "masp": "sp100",
+      "name": "test",
+      "type": "traicay",
+      "xuatxu": "Cà mau",
+      "soluong": "1",
+      "price": "1",
+      "dvt": "cái",
+      "ngaynhap": "2024-05-04",
+      "ngayhethan": "2024-05-11",
+      "giagoc": "1",
+      "photo1": "c",
+      "photo2": ""
     }
   ],
   "user": [
@@ -654,9 +669,9 @@
     }
   ],
   "currentUser": {
-    "id": null,
-    "username": "",
-    "role": ""
+    "id": "admin",
+    "username": "admin",
+    "role": "admin"
   },
   "carts": [
     {
