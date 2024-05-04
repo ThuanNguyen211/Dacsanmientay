@@ -1,3 +1,39 @@
+const $ = document.querySelector.bind(document);
+
+const currentUserAPI = "http://localhost:3000/currentUser";
+const cartAPI = "http://localhost:3000/carts";
+const storageAPI = "http://localhost:3000/storage";
+function getCurrentUser(callback) {
+    fetch(currentUserAPI)
+        .then(res => res.json())
+        .then(callback);
+}
+
+getCurrentUser(user => {
+    if (user.id != null) {
+        let link_taikhoan = document.querySelector("#link_taikhoan");
+        link_taikhoan.href = "user.html";
+        link_taikhoan.innerHTML =
+            `
+                <i class="bi bi-person-circle pe-2"></i>
+                Xin chào ${user.username}
+            `
+    }
+})
+//----------------- Nut gio hang ----------------
+const cart_icon = document.querySelector("#cart_icon");
+cart_icon.addEventListener("click", () => {
+    getCurrentUser(user => {
+        if (user.id == null) {
+            window.location.href = "login.html";
+            alert("Vui lòng đăng nhập trước khi xem giỏ hàng");
+        } else {
+            window.location.href = "user.html";
+        }
+    })
+})
+
+
 // Lấy mã sản phẩm từ URL
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('masp');
@@ -102,29 +138,10 @@ function detail(product) {
 fetchProductDetail();
 
 
-//--------------------------------------------
-const $ = document.querySelector.bind(document);
+//--------------------- add Cart -----------------------
 
-const currentUserAPI = "http://localhost:3000/currentUser";
-const cartAPI = "http://localhost:3000/carts";
-const storageAPI = "http://localhost:3000/storage";
-function getCurrentUser(callback) {
-    fetch(currentUserAPI)
-        .then(res => res.json())
-        .then(callback);
-}
 
-getCurrentUser(user => {
-    if (user.id != null) {
-        let link_taikhoan = document.querySelector("#link_taikhoan");
-        link_taikhoan.href = "user.html";
-        link_taikhoan.innerHTML =
-            `
-                <i class="bi bi-person-circle pe-2"></i>
-                Xin chào ${user.username}
-            `
-    }
-})
+
 //Trả về giỏ hàng của user dang sử dụng
 // {
 //     "id": "user1",

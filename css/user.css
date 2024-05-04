@@ -1,3 +1,31 @@
+/* ------------- Xoa mui ten trong input ---------------- */
+.input_group {
+    margin: 0 10px;
+}
+.input_group button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    
+}
+
+input {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+/* -------------------------------------- */
+
 .sp_container {
     max-height: 200px;
     margin: 10px 0;
@@ -9,9 +37,7 @@
     height: 125px;
 }
 
-.spInfo_container {
-
-}
+.spInfo_container {}
 
 img {
     height: 100%;

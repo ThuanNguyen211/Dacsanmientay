@@ -63,3 +63,16 @@ getCurrentUser(user => {
         `
     }
 })
+
+//----------------- Nut gio hang ----------------
+const cart_icon = document.querySelector("#cart_icon");
+cart_icon.addEventListener("click", () => {
+    getCurrentUser(user => {
+        if (user.id == null) {
+            window.location.href = "login.html";
+            alert("Vui lòng đăng nhập trước khi xem giỏ hàng");
+        } else {
+            window.location.href = "user.html";
+        }
+    })
+})

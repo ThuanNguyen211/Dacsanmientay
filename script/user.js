@@ -92,8 +92,14 @@ currentUserID.then(userid => {
                         <div class="spInfo_container">
                             <p class="lead">${tensp}</p>
                         </div>
-                        <div>
+                        <div class="input_group">
+                            <button type="button" class="decrementSoluongBtn">
+                            -
+                            </button>
                             <input type="number" min=1 value="${soluong}" class="soluong_input" masp="${masp}">
+                            <button type="button" class="incrementSoluongBtn">
+                            +
+                            </button>
                         </div>
                         <div>
                         <p class="price">${price*soluong}<sup>đ</sup></p>
@@ -141,14 +147,25 @@ function addCartAPI(danhSachSP) {
 }
 
 setTimeout(() => {
-    const soluong_inputs = document.querySelectorAll(".soluong_input");
-    console.log(soluong_inputs)
-    soluong_inputs.forEach(soluong_input => {
-        soluong_input.addEventListener("change", () => {
-            
-            let soluong = soluong_input.value;
-            let masp = soluong_input.getAttribute("masp");
-            console.log(masp)
+
+    const xoa_sp = (masp) => {
+        getCart(cart => {
+            let danhSachSP = cart.danhSachSP;
+            for (let i = 0; i < danhSachSP.length; i++) {
+                if (masp === danhSachSP[i].masp) {
+                    danhSachSP.splice(i, 1);
+                    addCartAPI(danhSachSP);
+                }
+            }
+        })
+    }
+
+    const updateSoluong = (soluong_input) => {
+        let masp = soluong_input.getAttribute("masp");
+        let soluong = soluong_input.value;
+        if (soluong < 1) {
+            xoa_sp(masp);
+        } else {
             getCart(cart => {
                 let danhSachSP = cart.danhSachSP;
                 for (let i = 0; i < danhSachSP.length; i++) {
@@ -158,8 +175,42 @@ setTimeout(() => {
                     }
                 }
             })
+        }
+    }
+
+    const soluong_inputs = document.querySelectorAll(".soluong_input");
+    console.log(soluong_inputs)
+    soluong_inputs.forEach(soluong_input => {
+        soluong_input.addEventListener("change", (event) => updateSoluong(soluong_input));
+    })
+    //---------- giam so luong -----------------------
+    const decrementSoluongBtns = document.querySelectorAll(".decrementSoluongBtn");
+    decrementSoluongBtns.forEach(decrementSoluongBtn => {
+        decrementSoluongBtn.addEventListener("click", (event) => {
+            decrementSoluong(event.target)
         })
     })
+    function decrementSoluong(button) {
+        console.log(button)
+        const soluong_input = button.parentNode.querySelector('[type=number]');
+        let soluong = parseInt(soluong_input.value) - 1;
+        soluong_input.value = soluong;
+        updateSoluong(soluong_input)
+    }
+
+    //------------------- tang so luong -------------------------
+    const incrementSoluongBtns = document.querySelectorAll(".incrementSoluongBtn");
+    incrementSoluongBtns.forEach(incrementSoluongBtn => {
+        incrementSoluongBtn.addEventListener("click", (event) => {
+            incrementSoluong(event.target)
+        })
+    })
+    function incrementSoluong(button) {
+        const soluong_input = button.parentNode.querySelector('[type=number]');
+        let soluong = parseInt(soluong_input.value) + 1;
+        soluong_input.value = soluong;
+        updateSoluong(soluong_input)
+    }
     //------------------- Xoa sp --------------------------------
     const xoa_sps = document.querySelectorAll(".xoa_sp");
     xoa_sps.forEach(xoa_sp => {
