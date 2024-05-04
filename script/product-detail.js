@@ -46,11 +46,13 @@ function displayProduct(product) {
             <!-- Carousel end -->
         </div>
         <div class="product-info">
-            <h2>${product.name}</h2>
-            <p class="price">${product.price}<sup>đ</sup></p>
-            <div">
+            <h1>${product.name}</h1>
+            <h5 class="price">Giá : ${product.price}<sup>đ</sup>/${product.dvt}</h5>
+            <p>Mô tả : ${product.content}</p>
+            <div class="addcart">
                 <input type="number" value="1" min="1" id="input_soluong">
                 <button class="btn btn-primary" value="${product.masp}" id="addCartBtn">Thêm vào giỏ hàng</button>
+            </div>
         </div>
     </div>
     `;
