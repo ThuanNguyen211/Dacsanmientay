@@ -84,6 +84,7 @@ function addProduct() {
         let type = document.querySelector(".modalsp #type").value;
         let xuatxu = document.querySelector(".modalsp #xuatxu").value;
         let soluong = document.querySelector(".modalsp #soluong").value;
+        let mota = document.querySelector(".modalsp #mota").value;
         let giagoc = document.querySelector(".modalsp #giaban").value;
         let dvt = document.querySelector(".modalsp #donvitinh").value;
         let ngaynhap = document.querySelector(".modalsp #ngaynhap").value;
@@ -91,7 +92,7 @@ function addProduct() {
         let hinhanh1 = document.querySelector(".modalsp #hinhanh1").value;
         let hinhanh2 = document.querySelector(".modalsp #hinhanh2").value;
 
-        let check = validation(masp, name, xuatxu, soluong, giagoc, dvt, ngaynhap, ngayhethan, hinhanh1, hinhanh2, tong);
+        let check = validation(masp, name, xuatxu, soluong,mota, giagoc, dvt, ngaynhap, ngayhethan, hinhanh1, hinhanh2, tong);
         if (check == false) return;
 
         if (!arrayMasp.includes(masp)) {
@@ -100,6 +101,7 @@ function addProduct() {
                 masp: masp,
                 name: name,
                 type: type,
+                content :mota,
                 xuatxu: xuatxu,
                 soluong: soluong,
                 price: giagoc,
@@ -176,7 +178,7 @@ function UpdateProduct(id) {
                     let ngaynhap = document.querySelector(".modalsuasp #ngaynhap").value;
                     let ngayhethan = document.querySelector(".modalsuasp #ngayhethan").value;
                     let hinhanh = document.querySelector(".modalsuasp #hinhanh").value;
-                    let check = validation(e.masp, e.name, e.xuatxu, e.soluong, e.giagoc, e.dvt, e.ngaynhap, e.ngayhethan, e.hinhanh1, e.hinhanh2, tong);
+                    let check = validation(e.masp, e.name, e.xuatxu,e.mota, e.soluong, e.giagoc, e.dvt, e.ngaynhap, e.ngayhethan, e.hinhanh1, e.hinhanh2, tong);
                     if (check == false) return;
                     // Ban đầu gán thuộc tính mới bằng thuộc tính cũ
                     var updatesp = {
@@ -367,7 +369,7 @@ function filter() {
 
 // Form validation
 
-function validation(masp, name, xuatxu, soluong, giagoc, dvt, ngaynhap, ngayhethan, hinhanh1, hinhanh2, tong) {
+function validation(masp, name, xuatxu, soluong,mota, giagoc, dvt, ngaynhap, ngayhethan, hinhanh1, hinhanh2, tong) {
     if (tong + parseInt(soluong) > 1000) {
         alert("Không đủ diện tích kho chứa");
         return false;
@@ -382,6 +384,10 @@ function validation(masp, name, xuatxu, soluong, giagoc, dvt, ngaynhap, ngayheth
     }
     if (xuatxu.length == 0) {
         alert("Vui lòng nhập xuất xứ sản phẩm");
+        return false;
+    }
+    if (mota.length == 0) {
+        alert("Vui lòng nhập mô tả");
         return false;
     }
     if (soluong == 0) {
